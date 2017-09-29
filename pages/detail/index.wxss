@@ -1,0 +1,13 @@
+/*  吉他谱详情  */
+.m-detail{
+  text-align: center;
+}
+.m-detail image{
+  margin-top: 20rpx;
+}
+.m-detail audio{
+  margin-top: 40rpx;
+}
+.m-detail .title{
+  font-size: 18px;
+}

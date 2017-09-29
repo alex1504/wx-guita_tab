@@ -1,0 +1,6 @@
+<!--  吉他谱详情  -->
+<view class='m-detail' wx-if="guita_detail">
+  <view class='title'>{{guita_detail.song_name}}</view>
+  <audio src="{{guita_detail.audio}}" controls='true' name='{{guita_detail.song_name}}' author='{{guita_detail.author_name}}'></audio>
+  <image src="{{guita_detail.chord_image}}"></image>
+</view>

@@ -1,0 +1,42 @@
+<!--  搜索条  -->
+<view class='m-search'>
+  <view class='flex-input'>
+    <label class='icon icon-search'></label>
+    <input type='text' placeholder='吉他谱名' bindinput='bindSearchInput'></input>
+  </view>
+  <view class='flex-btn' bindtap='onSearch'>
+    搜索
+  </view>
+</view>
+
+<!--  搜索列表  -->
+<view class='m-list'>
+  <view class='item'>
+    <view class='item-hd'>
+      <image src='http://ory715icu.bkt.clouddn.com//17-6-30/3144809.jpg' mode="aspectFill"></image>
+    </view>
+    <view class='item-bd'>
+      <view class='content'>
+        <view>老男孩</view>
+        <view>筷子兄弟</view>
+      </view>
+      <view class='icon-bx'>
+        <view class='icon icon-love-false'></view>
+      </view>
+    </view>
+  </view>
+  <view class='item'>
+    <view class='item-hd'>
+      <image src='http://ory715icu.bkt.clouddn.com//17-6-30/3144809.jpg' mode="aspectFill"></image>
+    </view>
+    <view class='item-bd'>
+      <view class='content'>
+        <view>老男孩</view>
+        <view>筷子兄弟</view>
+      </view>
+      <view class='icon-bx'>
+        <view class='icon icon-love-true'></view>
+      </view>
+    </view>
+  </view>
+</view>

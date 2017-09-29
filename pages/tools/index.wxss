@@ -1,0 +1,13 @@
+.m-tool{
+  padding: 20rpx;
+}
+.m-tool image{
+  margin-top: 10rpx;
+  width: 100%;
+}
+.m-tool .title{
+  font-size: 16px;
+}
+.m-tool .content{
+  text-align: center;
+}

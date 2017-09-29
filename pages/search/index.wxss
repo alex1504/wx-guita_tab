@@ -1,0 +1,66 @@
+/*  搜索条  */
+.m-search{
+  background-color: #efeff4;
+  padding: 20rpx;
+  display: flex;
+  align-items: center;
+}
+.m-search input{
+  display: inline-block;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+  height: 1.8rem;
+}
+.m-search .flex-input{
+  display: flex;
+  align-items: center;
+  flex: 1;
+  background-color: #fff;
+  padding-left: 20rpx;
+}
+
+.m-search .flex-btn{
+  background-color: #dfdfdf;
+  height: 1.8rem;
+  line-height: 1.8rem;
+  width: 140rpx;
+  text-align: center;
+  color: #9c9c9c;
+}
+/*  搜索列表  */
+.m-list{
+  padding: 20rpx;
+}
+
+.m-list .item{
+  display: flex;
+  align-items: flex-start;
+  border: 1px solid #efeff4;
+  height: 150rpx;
+  background-color: rgba(240,240,240,.6)
+}
+.m-list .item:nth-child(n+1){
+  margin-top: 20rpx;
+}
+.m-list .item image{
+  width: 100%;
+  height: 100%
+}
+.m-list .item-hd{
+  flex-basis: 150rpx;
+  height: 100%;
+  margin-right: 20rpx;
+  
+}
+.m-list .item-bd{
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex: 1
+}
+.m-list .item-bd .content{
+  flex: 1;
+}
+.m-list .item-bd .icon-bx{
+  flex-basis: 80rpx;
+}

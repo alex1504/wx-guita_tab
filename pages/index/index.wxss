@@ -1,0 +1,28 @@
+/**index.wxss**/
+swiper{
+  height: 300rpx;
+}
+swiper image{
+  width: 100%;
+}
+
+
+/*  list  */
+.m-list{
+  padding: 20rpx;
+  text-align: center;
+}
+.m-list .item{
+  box-sizing: border-box;
+  width: 50%;
+  float: left;
+}
+.m-list .item:nth-child(odd){
+  padding: 0 10rpx 20rpx 0;
+}
+.m-list .item:nth-child(even){
+  padding: 0 0 20rpx 10rpx;
+}
+.m-list .item image{
+  height: 200rpx;
+}

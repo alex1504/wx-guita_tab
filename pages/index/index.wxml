@@ -1,0 +1,68 @@
+<!-- 轮播图 -->
+<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" />
+    </swiper-item>
+  </block>
+</swiper>
+
+
+<!-- 列表  -->
+<view class='g-main'>
+{{test}}
+  <view class='m-list'>
+    <view class='item' bindtap="navigateToDetail" data-id="{{item.id}}" wx:for="{{guita_list}}" wx:key="{{index}}">
+      <image src="{{item.song_poster}}" mode="aspectFill"></image>
+      <view>
+        <text>{{item.song_name}}</text>
+      </view>
+    </view>
+    <!-- <view class='item' bindtap='navigateToDetail'>
+      <image src='http://ory715icu.bkt.clouddn.com//17-6-30/3144809.jpg' mode="aspectFill"></image>
+      <view>
+        <text>老男孩吉他谱</text>
+      </view>
+    </view>
+    <view class='item' bindtap='navigateToDetail'>
+      <image src='http://ory715icu.bkt.clouddn.com//17-6-30/3144809.jpg' mode="aspectFill"></image>
+      <view>
+        <text>老男孩吉他谱</text>
+      </view>
+    </view> -->
+  </view>
+</view>
+
+
+
+
+<!-- 底部导航  -->
+<view class='m-nav'>
+  <view>
+    <navigator url='/pages/index/index' open-type='redirect'>
+      <view class='icon icon-home'></view>
+      主页
+    </navigator>
+
+  </view>
+  <view>
+    <navigator url='/pages/search/index'>
+      <view class='icon icon-search'></view>
+      搜索
+    </navigator>
+
+  </view>
+  <view>
+    <navigator url='/pages/tools/index' open-type='redirect'>
+      <view class='icon icon-tool'></view>
+      工具
+    </navigator>
+  </view>
+
+  <view>
+    <navigator url='/pages/collect/index'>
+      <view class='icon icon-love'></view>
+      收藏
+    </navigator>
+  </view>
+</view>

@@ -6,12 +6,11 @@ const app = getApp()
 Page({
   data: {
     imgUrls: [
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
+      'http://qiniu1.huzerui.com/17-9-30/51986108.jpg',
+      'http://qiniu1.huzerui.com/17-9-30/52228221.jpg'
     ],
     indicatorDots: false,
-    autoplay: false,
+    autoplay: 2000,
     interval: 5000,
     duration: 1000,
 
@@ -19,15 +18,25 @@ Page({
 
   },
   //事件处理函数
-  navigateToDetail: function(e) {
+  navigateToDetail: function (e) {
     const id = e.currentTarget.dataset.id;
     wx.navigateTo({
-      url: '../detail/index?id='+id
+      url: '../detail/index?id=' + id
     })
   },
   onLoad: function () {
+    if (app.globalData.guita_list) {
+      this.setData({
+        guita_list: app.globalData.guita_list
+      })
+      return;
+    }
+    wx.showLoading({
+      title: '加载中'
+    })
     API.getChords()
-      .then(res=>{
+      .then(res => {
+        wx.hideLoading();
         this.setData({
           guita_list: res
         })

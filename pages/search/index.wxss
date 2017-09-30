@@ -1,6 +1,6 @@
 /*  搜索条  */
 .m-search{
-  background-color: #efeff4;
+  background-color: rgba(196, 221, 250,.4);
   padding: 20rpx;
   display: flex;
   align-items: center;
@@ -10,6 +10,8 @@
   box-sizing: border-box;
   padding-left: 20rpx;
   height: 1.8rem;
+  width: 100%;
+  color: #998989;
 }
 .m-search .flex-input{
   display: flex;
@@ -20,13 +22,17 @@
 }
 
 .m-search .flex-btn{
-  background-color: #dfdfdf;
+  background-color: #b2d2f5;
   height: 1.8rem;
   line-height: 1.8rem;
   width: 140rpx;
   text-align: center;
-  color: #9c9c9c;
+  color: #fefefe;
 }
+.m-search .icon-search{
+  color: rgba(196, 221, 250,1);
+}
+
 /*  搜索列表  */
 .m-list{
   padding: 20rpx;
@@ -63,4 +69,8 @@
 }
 .m-list .item-bd .icon-bx{
   flex-basis: 80rpx;
+}
+.m-list .tip{
+  color: #cad3d7;
+  text-align: center;
 }

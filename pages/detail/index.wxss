@@ -4,10 +4,17 @@
 }
 .m-detail image{
   margin-top: 20rpx;
+  width: 100%;
 }
 .m-detail audio{
   margin-top: 40rpx;
 }
 .m-detail .title{
+  position: relative;
   font-size: 18px;
+}
+.m-detail .icon{
+  position: absolute;
+  right: 60rpx;
+  top: 0;
 }

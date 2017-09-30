@@ -38,7 +38,7 @@
 
 <!-- 底部导航  -->
 <view class='m-nav'>
-  <view>
+  <view class='z-active'>
     <navigator url='/pages/index/index' open-type='redirect'>
       <view class='icon icon-home'></view>
       主页
@@ -46,7 +46,7 @@
 
   </view>
   <view>
-    <navigator url='/pages/search/index'>
+    <navigator url='/pages/search/index' open-type='redirect'>
       <view class='icon icon-search'></view>
       搜索
     </navigator>
@@ -60,7 +60,7 @@
   </view>
 
   <view>
-    <navigator url='/pages/collect/index'>
+    <navigator url='/pages/collect/index' open-type='redirect'>
       <view class='icon icon-love'></view>
       收藏
     </navigator>

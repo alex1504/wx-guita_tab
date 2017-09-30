@@ -12,6 +12,15 @@ swiper image{
   padding: 20rpx;
   text-align: center;
 }
+.m-list::after{
+  content: "";
+  display: block;
+  visibility: hidden;
+  height: 0px;
+  width: 100%;
+  clear: both;
+
+}
 .m-list .item{
   box-sizing: border-box;
   width: 50%;

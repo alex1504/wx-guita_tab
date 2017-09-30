@@ -14,7 +14,7 @@ Page({
     interval: 5000,
     duration: 1000,
 
-    guita_list: null
+    guita_list: [],
 
   },
   //事件处理函数
@@ -25,6 +25,9 @@ Page({
     })
   },
   onLoad: function () {
+    this.setData({
+      guita_list:[]
+    })
     if (app.globalData.guita_list) {
       this.setData({
         guita_list: app.globalData.guita_list
@@ -34,13 +37,31 @@ Page({
     wx.showLoading({
       title: '加载中'
     })
-    API.getChords()
+    
+    this.loadData(app.globalData.page)
+  },
+  loadData(page){
+    if (app.globalData.isLoadAll) return;
+    API.getChords(page)
       .then(res => {
         wx.hideLoading();
+        if(res.length == 0){
+          wx.showToast({
+            title: '已加载所有数据',
+          })
+          app.globalData.isLoadAll = true;
+          return;
+        }
+        res.forEach(obj => this.data.guita_list.push(obj));
         this.setData({
-          guita_list: res
+          guita_list: this.data.guita_list
         })
-        app.globalData.guita_list = res
+        app.globalData.guita_list = this.data.guita_list;
+        app.globalData.page += 1;
       })
+  },
+  onReachBottom(){
+    this.loadData(app.globalData.page);
   }
+
 })

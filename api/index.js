@@ -1,9 +1,14 @@
 import Bmob from '../utils/bmob';
 module.exports = {
-  getChords() {
+  getChords(page) {
+    page = typeof page == 'undefine' ? 1 : page;
+    page = parseInt(page);
     return new Promise((resolve, reject) => {
-      var Guita_info = Bmob.Object.extend("guita_chord_info");
-      var query = new Bmob.Query(Guita_info);
+      let Guita_info = Bmob.Object.extend("guita_chord_info");
+      let query = new Bmob.Query(Guita_info);
+      let limit = 10;
+      query.limit(limit);
+      query.skip((page - 1) * limit);
       query.find({
         success: function (result) {
           result = result.map(obj => {

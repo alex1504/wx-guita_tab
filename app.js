@@ -7,6 +7,8 @@ App({
 
   },
   globalData: {
-    guita_list: null
+    guita_list: null,
+    page: 1,
+    isLoadAll: false
   }
 })

@@ -11,3 +11,11 @@
 .m-tool .content{
   text-align: center;
 }
+.m-tool .flex-bx{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.m-tool .flex-bx .itm{
+  flex: 0 1 50%;
+}

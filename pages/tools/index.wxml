@@ -8,6 +8,51 @@
         <!-- <text>C和弦</text> -->
       </view>
     </view>
+    <text class='title'>初级开放和弦</text>
+    <view class='flex-bx'>
+      <view class='itm'>
+        <image src='http://qiniu1.huzerui.com/17-9-30/77784363.jpg'></image>
+      </view>
+      <view class='itm'>
+        <image src='http://qiniu1.huzerui.com/17-9-30/5416291.jpg'></image>
+      </view>
+      <view class='itm'>
+        <image src='http://qiniu1.huzerui.com/17-9-30/37406612.jpg'></image>
+      </view>
+      <view class='itm'>
+        <image src='http://qiniu1.huzerui.com/17-9-30/57311110.jpg'></image>
+      </view>
+      <view class='itm'>
+        <image src='http://qiniu1.huzerui.com/17-9-30/37431932.jpg'></image>
+      </view>
+      <view class='itm'>
+        <image src='http://qiniu1.huzerui.com/17-9-30/99767839.jpg'></image>
+      </view>
+      <view class='itm'>
+        <image src='http://qiniu1.huzerui.com/17-9-30/21248298.jpg'></image>
+      </view>
+    </view>
+    <text class='title'>属七和弦</text>
+    <view class='flex-bx'>
+      <view class='itm'>
+        <image src='http://qiniu1.huzerui.com/17-9-30/11413962.jpg'></image>
+      </view>
+      <view class='itm'>
+        <image src='http://qiniu1.huzerui.com/17-9-30/2921248.jpg'></image>
+      </view>
+      <view class='itm'>
+        <image src='http://qiniu1.huzerui.com/17-9-30/95124110.jpg'></image>
+      </view>
+      <view class='itm'>
+        <image src='http://qiniu1.huzerui.com/17-9-30/64237341.jpg'></image>
+      </view>
+      <view class='itm'>
+        <image src='http://qiniu1.huzerui.com/17-9-30/67007888.jpg'></image>
+      </view>
+      <view class='itm'>
+        <image src='http://qiniu1.huzerui.com/17-9-30/55443810.jpg'></image>
+      </view>
+    </view>
   </view>
 </view>
 

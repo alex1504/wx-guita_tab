@@ -2,7 +2,7 @@
 <view class='m-search'>
   <view class='flex-input'>
     <label class='icon icon-search'></label>
-    <input type='text' placeholder='歌曲名' bindinput='bindSearchInput' bindconfirm='onSearch'></input>
+    <input type='text' placeholder='歌曲名 / 歌手' bindinput='bindSearchInput' bindconfirm='onSearch' focus></input>
   </view>
   <view class='flex-btn' bindtap='onSearch'>
     搜索

@@ -48,6 +48,16 @@ Page({
     }
   },
 
+  // 显示图片查看器
+  showImageReader: function(e){
+    const _this = this;
+    const index = e.currentTarget.dataset.index;
+    wx.previewImage({
+      current: _this.data.guita_detail.chord_images[index],
+      urls: _this.data.guita_detail.chord_images
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */

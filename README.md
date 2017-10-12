@@ -4,15 +4,15 @@
 ![小程序二维码](https://raw.githubusercontent.com/alex1504/wx-guita_tab/master/assets/qrcode.png)
 
 ## 功能说明
-- [x]  分页加载及可配置轮播图
+- [x] 分页加载及可配置轮播图
 - [x] 吉他谱浏览及收藏数据统计
 - [x] 吉他谱收藏功能
 - [x] 搜索功能
 - [x] 吉他和弦查询工具
-- [x]音频试听（暂未录入数据）
-- [ ]歌词检索
-- [ ]搜附近吉友
-- [ ]吉他谱评论
+- [x] 音频试听（暂未录入数据）
+- [ ] 歌词检索
+- [ ] 搜附近吉友
+- [ ] 吉他谱评论
 
 ## 项目说明
 1. 使用bmob后端云提供数据服务
@@ -26,15 +26,15 @@ Using Wechat to scan the qrcode for preview
 ![qrcode](https://raw.githubusercontent.com/alex1504/wx-guita_tab/master/assets/qrcode.png)
 
 ## Functions
-- [x]  Page loading and configurable carousel figure
+- [x] Page loading and configurable carousel figure
 - [x] Guitar tabs browsing and collection couting
 - [x] Guita tabs collecting
 - [x] Guita tabs  searching
 - [x] Guitar chord query tool
-- [x]Audio listening（Not yet entered data）
-- [ ]Lyric searching
-- [ ]Nearby guita lover searching
-- [ ]Guita tabs comment
+- [x] Audio listening（Not yet entered data）
+- [ ] Lyric searching
+- [ ] Nearby guita lover searching
+- [ ] Guita tabs comment
 
 ## 项目说明
 1. Using bmob to provide data service

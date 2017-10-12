@@ -11,6 +11,8 @@ swiper image{
 .m-list{
   padding: 20rpx;
   text-align: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 .m-list::after{
   content: "";

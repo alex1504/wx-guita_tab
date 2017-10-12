@@ -1,10 +1,23 @@
 <!--  吉他谱详情  -->
 <view class='m-detail' wx-if="guita_detail">
+
   <view class='title'>
     {{guita_detail.song_name}}
     <view class='icon icon-love-false' wx:if="{{guita_detail.love_flag == 1}}" catch:tap='setSongFlag' data-id="{{guita_detail.id}}"></view>
     <view class='icon icon-love-true' wx:if="{{guita_detail.love_flag == 2}}" catch:tap='setSongFlag' data-id="{{guita_detail.id}}"></view>
   </view>
-  <audio wx:if="{{guita_detail.audio}}" src="{{guita_detail.audio}}" controls='true' name='{{guita_detail.song_name}}' author='{{guita_detail.author_name}}'></audio>
+  <view class='m-count'>
+    <view class='before'>
+      <view class='icon icon-eye'></view>
+      <text>{{guita_detail.view_count}}</text>
+    </view>
+    <view class='after'>
+      <view class='icon icon-love-true1'></view>
+      <text>{{guita_detail.collect_count}}</text>
+    </view>
+
+  </view>
+
+
   <image src="{{item}}" wx:for="{{guita_detail.chord_images}}" wx:key="{{index}}" mode="widthFix"></image>
 </view>

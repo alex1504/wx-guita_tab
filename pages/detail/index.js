@@ -16,35 +16,43 @@ Page({
 
     let iIndex = loveSongs.indexOf(id);
     if (iIndex == -1) {
-      loveSongs.push(id);
-      // 本地存储
-      wx.setStorage({
-        key: "loveSongs",
-        data: loveSongs
-      })
-      // 更新视图
-      this.setData({
-        'guita_detail.love_flag': 2
-      })
-      // 提示
-      wx.showToast({
-        title: '收藏成功'
-      })
+      API.setCollectNum(id, 1)
+        .then(()=>{
+          loveSongs.push(id);
+          // 本地存储
+          wx.setStorage({
+            key: "loveSongs",
+            data: loveSongs
+          })
+          // 更新视图
+          this.setData({
+            'guita_detail.love_flag': 2
+          })
+          // 提示
+          wx.showToast({
+            title: '收藏成功'
+          })
+        })
+      
     } else {
-      loveSongs.splice(iIndex, 1);
-      // 本地存储
-      wx.setStorage({
-        key: "loveSongs",
-        data: loveSongs
-      })
-      // 更新视图
-      this.setData({
-        'guita_detail.love_flag': 1
-      })
-      // 提示
-      wx.showToast({
-        title: '取消收藏成功'
-      })
+      API.setCollectNum(id, 2)
+        .then(() => {
+          loveSongs.splice(iIndex, 1);
+          // 本地存储
+          wx.setStorage({
+            key: "loveSongs",
+            data: loveSongs
+          })
+          // 更新视图
+          this.setData({
+            'guita_detail.love_flag': 1
+          })
+          // 提示
+          wx.showToast({
+            title: '取消收藏成功'
+          })
+        })
+     
     }
   },
 
@@ -52,12 +60,15 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    
+
     wx.showLoading({
       title: '加载中'
     })
     const id = options.id;
     const loveSongs = wx.getStorageSync('loveSongs') || [];
 
+    API.setViewNum(id);
     API.getChordById(id)
       .then(obj => {
         wx.hideLoading();

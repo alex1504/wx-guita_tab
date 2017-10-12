@@ -1,6 +1,7 @@
 /*  吉他谱详情  */
 .m-detail{
   text-align: center;
+  margin-top: 10px;
 }
 .m-detail image{
   margin-top: 20rpx;
@@ -13,8 +14,26 @@
   position: relative;
   font-size: 18px;
 }
-.m-detail .icon{
+.m-detail .title .icon{
   position: absolute;
   right: 60rpx;
   top: 0;
+}
+.m-count{
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 30rpx;
+}
+.m-count .before{
+  flex: 1;
+  text-align: left;
+  padding-left: 60rpx;
+}
+.m-count .after{
+  flex: 1;
+  text-align: right;
+  padding-right: 60rpx;
+}
+.m-count .icon{
+  margin-right: 10rpx;
 }

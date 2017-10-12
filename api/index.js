@@ -1,14 +1,14 @@
 import Bmob from '../utils/bmob';
 module.exports = {
-  getChords(page) {
+  getChords(page,limit) {
     page = typeof page == 'undefine' ? 1 : page;
     page = parseInt(page);
     return new Promise((resolve, reject) => {
       let Guita_info = Bmob.Object.extend("guita_chord_info");
       let query = new Bmob.Query(Guita_info);
-      let limit = 10;
+      limit = typeof limit == 'undefined' ? 10 : parseInt(limit);
       query.limit(limit);
-      query.skip((page - 1) * limit);
+      query.skip((page - 1) * limit);      
       query.find({
         success: function (result) {
           result = result.map(obj => {
@@ -20,6 +20,7 @@ module.exports = {
           resolve(result)
         },
         error: function (result, error) {
+          console.log(error)
           resolve(error)
         }
       });
@@ -63,13 +64,17 @@ module.exports = {
       });
     })
   },
-  setSongFlag(id,flag) {
+  // 收藏或取消收藏 1：收藏  2：取消收藏
+  setCollectNum(id,flag) {
     return new Promise((resolve, reject) => {
       var Guita_info = Bmob.Object.extend("guita_chord_info");
       var query = new Bmob.Query(Guita_info);
       query.get(id, {
         success: function (res) {
-          res.set('love_flag', parseInt(flag));
+          var num = res.attributes.collect_count;
+          num = flag == 1 ? num+1 : num-1;
+          num = num < 0 ? 0 : num;
+          res.set('collect_count', parseInt(num));
           res.save();
           resolve(res);
         },
@@ -79,6 +84,45 @@ module.exports = {
       });
     })
   },
-
+  getBanner() {
+    return new Promise((resolve, reject) => {
+      let Banner = Bmob.Object.extend("banner");
+      let query = new Bmob.Query(Banner);
+      query.find({
+        success: function (result) {
+          result = result.map(obj => {
+            return {
+              id: obj.id,
+              ...obj.attributes
+            }
+          });
+          resolve(result)
+        },
+        error: function (result, error) {
+          resolve(error)
+        }
+      });
+    })
+  },
+  // 增加访问统计
+  setViewNum(id) {
+    return new Promise((resolve, reject) => {
+      var Guita_info = Bmob.Object.extend("guita_chord_info");
+      var query = new Bmob.Query(Guita_info);
+      query.get(id, {
+        success: function (res) {
+          var num = res.attributes.view_count;
+          num +=1;
+          res.set('view_count', parseInt(num));
+          res.save();
+          resolve(res);
+        },
+        error: function (object, error) {
+          reject(error);
+        }
+      });
+    })
+  }
+  
 
 }

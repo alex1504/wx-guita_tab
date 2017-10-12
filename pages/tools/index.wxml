@@ -1,5 +1,7 @@
 <!-- 和弦图  -->
 <view class='g-main'>
+
+
   <view class='m-tool'>
     <text class='title'>吉他和弦图</text>
     <view class='content'>

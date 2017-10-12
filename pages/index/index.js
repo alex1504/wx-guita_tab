@@ -5,16 +5,14 @@ const app = getApp()
 
 Page({
   data: {
-    imgUrls: [
-      'http://qiniu1.huzerui.com/17-9-30/51986108.jpg',
-      'http://qiniu1.huzerui.com/17-9-30/52228221.jpg'
-    ],
+   
     indicatorDots: false,
     autoplay: 2000,
     interval: 5000,
     duration: 1000,
 
     guita_list: [],
+    banner_list: []
 
   },
   //事件处理函数
@@ -25,8 +23,12 @@ Page({
     })
   },
   onLoad: function () {
+    this.getGuitaData();
+    this.getBanner();
+  },
+  getGuitaData(){
     this.setData({
-      guita_list:[]
+      guita_list: []
     })
     if (app.globalData.guita_list) {
       this.setData({
@@ -37,11 +39,30 @@ Page({
     wx.showLoading({
       title: '加载中'
     })
-    
+
     this.loadData(app.globalData.page)
+  },
+  getBanner(){
+    if (app.globalData.banner_list) {
+      this.setData({
+        banner_list: app.globalData.banner_list
+      })
+      return;
+    }
+    API.getBanner()
+      .then(res=>{
+        console.log(res)
+        this.setData({
+          banner_list: res
+        })
+        app.globalData.banner_list = this.data.banner_list;
+      })
   },
   loadData(page){
     if (app.globalData.isLoadAll) return;
+    wx.showLoading({
+      title: '加载中',
+    });
     API.getChords(page)
       .then(res => {
         wx.hideLoading();

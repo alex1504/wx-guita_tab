@@ -25,12 +25,14 @@ Page({
     wx.showLoading({
       title: '加载中'
     })
-
-    API.getChords()
+    console.log(loveSongs)
+    API.getChords(1,100000)
       .then(res => {
         wx.hideLoading();
 
         // 过滤歌曲
+        console.log(res)
+        
         res = res.filter(obj => {
           return loveSongs.indexOf(obj.id) > -1
         })
@@ -43,6 +45,7 @@ Page({
         }
 
         // 添加标识
+        
         res.forEach(function (obj) {
           if (loveSongs.indexOf(obj.id) == -1) {
             obj.love_flag = 1;

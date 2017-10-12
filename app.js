@@ -8,6 +8,7 @@ App({
   },
   globalData: {
     guita_list: null,
+    banner_list:null,
     page: 1,
     isLoadAll: false
   }

@@ -15,9 +15,7 @@
       <view class='icon icon-love-true1'></view>
       <text>{{guita_detail.collect_count}}</text>
     </view>
-
   </view>
+  <image src="{{item}}" wx:for="{{guita_detail.chord_images}}" wx:key="{{index}}" mode="widthFix" bindtap='showImageReader'></image>
 
-
-  <image src="{{item}}" wx:for="{{guita_detail.chord_images}}" wx:key="{{index}}" mode="widthFix"></image>
 </view>

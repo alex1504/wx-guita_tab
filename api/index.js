@@ -43,12 +43,20 @@ module.exports = {
       });
     })
   },
-  searchChord(song_name) {
+  searchChord(queryString) {
     return new Promise((resolve, reject) => {
       var Guita_info = Bmob.Object.extend("guita_chord_info");
-      var query = new Bmob.Query(Guita_info);
-      query.equalTo("song_name", song_name);
-      query.find({
+
+      var songQuery = new Bmob.Query(Guita_info);
+      songQuery.equalTo("song_name", queryString);
+
+      var authorQuery = new Bmob.Query(Guita_info);
+      authorQuery.equalTo("author_name", queryString);
+
+      var mainQuery = Bmob.Query.or(songQuery, authorQuery);
+
+      
+      mainQuery.find({
         success: function (result) {
           result = result.map(obj => {
             return {

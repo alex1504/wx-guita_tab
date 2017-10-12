@@ -9,7 +9,8 @@ Page({
   data: {
     searchTxt: '',
     searchSongs: [],
-    isTipShow: false
+    isTipShow: false,
+    hotSongs:[]
   },
   // 事件
   onSearch(e) {
@@ -52,6 +53,11 @@ Page({
       })
   },
   bindSearchInput(e) {
+    if (!e.detail.value){
+      this.setData({
+        isTipShow:false
+      })
+    }
     this.setData({
       searchTxt: e.detail.value
     })
@@ -103,27 +109,29 @@ Page({
         title: '取消收藏成功'
       })
     }
-
-    // let id = e.currentTarget.dataset.id;
-    // let index = e.currentTarget.dataset.index;
-    // let flag = this.data.searchSongs[index].love_flag == 1 ? 2 : 1;
-    // console.log(flag)
-    // API.setSongFlag(id,flag)
-    //   .then(res=>{
-    //     const key = 'searchSongs['+index+'].love_flag'
-    //     console.log(key)
-    //     // 注意setData对数组的index只能是固定整数，不能动态，因此需提前用变量存起拼接好的key，这是因为在key中[]中的非整数值会被识别为变量
-    //     this.setData({
-    //       [key] : flag
-    //     })
-    //   })
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    API.getChords(1,999999)
+      .then(res=>{
+        res.sort((a,b)=>{
+          a.search_count = typeof a.search_count == 'undefined' ? 0 : a.search_count
+          b.search_count = typeof b.search_count == 'undefined' ? 0 : b.search_count
+          return b.search_count - a.search_count 
+        })
+        // 搜索排名前10
+        let filterArr = res.slice(0,10);
+        // 搜索量至少大于等于30
+        filterArr = filterArr.filter(obj=>{
+          return obj.search_count >=30
+        })
+        this.setData({
+          hotSongs: filterArr
+        })
+      })
   },
 
   /**

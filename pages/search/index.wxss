@@ -74,3 +74,37 @@
   color: #cad3d7;
   text-align: center;
 }
+
+/*  热门搜索  */
+.m-hot{
+  padding: 20rpx;
+}
+.m-hot .title{
+  position: relative;
+  padding-left: 10px;
+}
+.m-hot .title::before{
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  display: block;
+  width: 4px;
+  height: 100%;
+  background-color: #b2d2f5;
+}
+.m-hot .tag-wrap{
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.m-hot .tag{
+  border: 1px solid #b2d2f5;
+  padding: 2rpx 20rpx;
+}
+.m-hot .tag{
+  margin-top:20rpx;
+  margin-right: 10rpx;
+}

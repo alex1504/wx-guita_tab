@@ -2,15 +2,23 @@
 <view class='m-search'>
   <view class='flex-input'>
     <label class='icon icon-search'></label>
-    <input type='text' placeholder='歌曲名' bindinput='bindSearchInput' bindconfirm='onSearch'></input>
+    <input type='text' placeholder='歌曲名 / 歌手' bindinput='bindSearchInput' bindconfirm='onSearch' focus></input>
   </view>
   <view class='flex-btn' bindtap='onSearch'>
     搜索
   </view>
 </view>
 
-<!--  搜索列表  -->
+<!-- 热门搜索  -->
+<view class='m-hot' wx:if="{{!searchTxt}}">
+  <view class='title'>热门搜索</view>
+  <view class='tag-wrap'>
+    <text class='tag' wx:for="{{hotSongs}}" wx:key="index" bindtap='showDetail' data-id="{{item.id}}">{{item.song_name}}</text>
+  </view>
+</view>
+
 <view class='g-main'>
+  <!--  搜索列表  -->
   <view class='m-list'>
     <view class='item' wx:for="{{searchSongs}}" wx:key="{{index}}" bindtap='showDetail' data-id="{{item.id}}">
       <view class='item-hd'>
@@ -28,7 +36,7 @@
       </view>
     </view>
 
-    <view class='tip' wx:if="{{isTipShow}}">
+    <view class='tip' wx:if="{{isTipShow && searchTxt}}">
       <view class='icon icon-sad'></view>
       <view>
         <text>抱歉，暂无该歌曲数据</text>

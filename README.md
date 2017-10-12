@@ -1,6 +1,7 @@
 # CN:
 ## 微信小程序·口袋吉他
 用微信扫描二维码预览
+
 ![小程序二维码](https://raw.githubusercontent.com/alex1504/wx-guita_tab/master/assets/qrcode.png)
 
 ## 功能说明
@@ -23,6 +24,7 @@
 # EN:
 ## WechatApp·Pocket Guita
 Using Wechat to scan the qrcode for preview
+
 ![qrcode](https://raw.githubusercontent.com/alex1504/wx-guita_tab/master/assets/qrcode.png)
 
 ## Functions

@@ -115,8 +115,12 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    wx.showLoading({
+      title: '加载中...'
+    })
     API.getChords(1,999999)
       .then(res=>{
+        wx.hideLoading();
         res.sort((a,b)=>{
           a.search_count = typeof a.search_count == 'undefined' ? 0 : a.search_count
           b.search_count = typeof b.search_count == 'undefined' ? 0 : b.search_count

@@ -19,3 +19,40 @@
 .m-tool .flex-bx .itm{
   flex: 0 1 50%;
 }
+
+.flex-bx{
+  display: flex;
+}
+.flex-itm{
+  flex: 1;
+}
+.title-bx{
+  border-top: 2px solid #666;
+  border-bottom: 1px solid #aaa;
+}
+.title-bx .flex-itm{
+  padding: 10px;
+}
+.content-bx .item{
+  position: relative;
+  box-sizing: border-box;
+  padding: 10px;
+  border-right: 1px solid #fff;
+}
+.content-bx .sound-name .item.active{
+  background-color: #5F98FD;
+  color: #fefefe;
+}
+.content-bx .sound-type .item.active{
+  background-color: #5F98FD;
+  color: #fefefe;
+}
+.content-bx .item::after{
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 80%;
+  height: 1px;
+  background-color: #aaa;
+  left: 10px;
+}

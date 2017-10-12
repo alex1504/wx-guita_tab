@@ -1,59 +1,35 @@
 <!-- 和弦图  -->
 <view class='g-main'>
+  <view>
+    <block wx:if="{{chordImages[selectSoundName][selectType]}}">
+      <image src="{{chordImages[selectSoundName][selectType]}}" mode='aspectFit'></image>
+    </block>
+  </view>
 
-
-  <view class='m-tool'>
-    <text class='title'>吉他和弦图</text>
-    <view class='content'>
-      <image src='http://qiniu1.huzerui.com/17-9-30/41560311.jpg' mode="aspectFill"></image>
-      <view class='desc'>
-        <!-- <text>C和弦</text> -->
-      </view>
+  <view class='flex-bx title-bx'>
+    <text class='flex-itm'>音名</text>
+    <text class='flex-itm'>和弦类型</text>
+  </view>
+  <view class='flex-bx content-bx'>
+    <view class='flex-itm sound-name'>
+      <block wx:for="{{soundNameList}}">
+        <view wx:if="{{index != selectSoundName}}" class='item' wx:key="{{index}}" bindtap='changeSoundName' data-index="{{index}}">
+          {{item}}
+        </view>
+        <view wx:if="{{index == selectSoundName}}" class='item active' wx:key="{{index}}" bindtap='changeSoundName' data-index="{{index}}">
+          {{item}}
+        </view>
+      </block>
     </view>
-    <text class='title'>初级开放和弦</text>
-    <view class='flex-bx'>
-      <view class='itm'>
-        <image src='http://qiniu1.huzerui.com/17-9-30/77784363.jpg'></image>
-      </view>
-      <view class='itm'>
-        <image src='http://qiniu1.huzerui.com/17-9-30/5416291.jpg'></image>
-      </view>
-      <view class='itm'>
-        <image src='http://qiniu1.huzerui.com/17-9-30/37406612.jpg'></image>
-      </view>
-      <view class='itm'>
-        <image src='http://qiniu1.huzerui.com/17-9-30/57311110.jpg'></image>
-      </view>
-      <view class='itm'>
-        <image src='http://qiniu1.huzerui.com/17-9-30/37431932.jpg'></image>
-      </view>
-      <view class='itm'>
-        <image src='http://qiniu1.huzerui.com/17-9-30/99767839.jpg'></image>
-      </view>
-      <view class='itm'>
-        <image src='http://qiniu1.huzerui.com/17-9-30/21248298.jpg'></image>
-      </view>
-    </view>
-    <text class='title'>属七和弦</text>
-    <view class='flex-bx'>
-      <view class='itm'>
-        <image src='http://qiniu1.huzerui.com/17-9-30/11413962.jpg'></image>
-      </view>
-      <view class='itm'>
-        <image src='http://qiniu1.huzerui.com/17-9-30/2921248.jpg'></image>
-      </view>
-      <view class='itm'>
-        <image src='http://qiniu1.huzerui.com/17-9-30/95124110.jpg'></image>
-      </view>
-      <view class='itm'>
-        <image src='http://qiniu1.huzerui.com/17-9-30/64237341.jpg'></image>
-      </view>
-      <view class='itm'>
-        <image src='http://qiniu1.huzerui.com/17-9-30/67007888.jpg'></image>
-      </view>
-      <view class='itm'>
-        <image src='http://qiniu1.huzerui.com/17-9-30/55443810.jpg'></image>
-      </view>
+    <view class='flex-itm sound-type'>
+      <block wx:for="{{typeList}}">
+        <view wx:if="{{index != selectType}}" class='item' wx:key="{{index}}" bindtap='changeType' data-index="{{index}}">
+          {{item}}
+        </view>
+        <view wx:if="{{index == selectType}}" class='item active' wx:key="{{index}}" bindtap='changeType' data-index="{{index}}">
+          {{item}}
+        </view>
+      </block>
     </view>
   </view>
 </view>

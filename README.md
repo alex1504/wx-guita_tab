@@ -11,9 +11,9 @@
 - [x] 搜索功能
 - [x] 吉他和弦查询
 - [x] 音频试听（暂未录入数据）
-- [ ] 歌词检索
-- [ ] 搜附近吉友
-- [ ] 吉他谱评论
+- [ ] 曲谱评论、分享、保存本地
+- [ ] 用户系统
+- [ ] 图片加载交互优化
 
 ## 项目说明
 1. 使用bmob后端云提供数据服务
@@ -34,9 +34,9 @@ Using Wechat to scan the qrcode for preview
 - [x] Guita tabs  searching
 - [x] Guitar chord query
 - [x] Audio listening（Not yet entered data）
-- [ ] Lyric searching
-- [ ] Nearby guita lover searching
-- [ ] Guita tabs comment
+- [ ] Tsbs comments, share and saving
+- [ ] User system 
+- [ ] Interactive optimization of picture loading
 
 ## 项目说明
 1. Using bmob to provide data service

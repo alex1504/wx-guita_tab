@@ -1,6 +1,6 @@
 <!-- 和弦图  -->
 <view class='g-main'>
-  <view>
+  <view class='m-chord-image'>
     <block wx:if="{{chordImages[selectSoundName][selectType]}}">
       <image src="{{chordImages[selectSoundName][selectType]}}" mode='aspectFit'></image>
     </block>

@@ -65,7 +65,12 @@ Page({
       urls: _this.data.guita_detail.chord_images
     })
   },
-
+  navigateToComment: function(e){
+    const id = e.currentTarget.dataset.id;
+    wx.navigateTo({
+      url: '../comment/index?id=' + id
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

@@ -1,11 +1,11 @@
 /*  icon  */
 @font-face {
   font-family: 'iconfont';  /* project id 431644 */
-  src: url('//at.alicdn.com/t/font_431644_aahynh26y6lp7gb9.eot');
-  src: url('//at.alicdn.com/t/font_431644_aahynh26y6lp7gb9.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_431644_aahynh26y6lp7gb9.woff') format('woff'),
-  url('//at.alicdn.com/t/font_431644_aahynh26y6lp7gb9.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_431644_aahynh26y6lp7gb9.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_431644_xgzwtkxocgx5stt9.eot');
+  src: url('//at.alicdn.com/t/font_431644_xgzwtkxocgx5stt9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_431644_xgzwtkxocgx5stt9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_431644_xgzwtkxocgx5stt9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_431644_xgzwtkxocgx5stt9.svg#iconfont') format('svg');
 }
 
 .icon{
@@ -53,7 +53,10 @@
   content: "\e661";
   color: #000;
 }
-
+.icon-comment::before{
+  content: "\e69a";
+  color: #e61b40;
+}
 /*  global  */
 page{
   font-size: 14px;

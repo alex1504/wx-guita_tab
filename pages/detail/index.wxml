@@ -2,6 +2,7 @@
 <view class='m-detail' wx-if="guita_detail">
 
   <view class='title'>
+    <view class='icon icon-comment' bindtap='navigateToComment' data-id="{{guita_detail.id}}"></view>
     {{guita_detail.song_name}}
     <view class='icon icon-love-false' wx:if="{{guita_detail.love_flag == 1}}" catch:tap='setSongFlag' data-id="{{guita_detail.id}}"></view>
     <view class='icon icon-love-true' wx:if="{{guita_detail.love_flag == 2}}" catch:tap='setSongFlag' data-id="{{guita_detail.id}}"></view>

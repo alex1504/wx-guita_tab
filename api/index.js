@@ -130,7 +130,29 @@ module.exports = {
         }
       });
     })
-  }
-  
+  },
+  getComments(songId) {
+    return new Promise((resolve, reject) => {
+      var Comment = Bmob.Object.extend("comment");
+
+      var query = new Bmob.Query(Comment);
+      query.equalTo("songId", songId);
+
+      query.find({
+        success: function (result) {
+          result = result.map(obj => {
+            return {
+              id: obj.id,
+              ...obj.attributes
+            }
+          });
+          resolve(result)
+        },
+        error: function (result, error) {
+          resolve(error)
+        }
+      });
+    })
+  },
 
 }

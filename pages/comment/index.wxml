@@ -1,0 +1,75 @@
+<view class="g-mn">
+  <view class="form">
+    <textarea placeholder='说说你对谱子或者歌曲的看法'></textarea>
+    <view class="u-btn u-btn-launch">发表</view>
+  </view>
+
+  <!-- 热门评论  -->
+  <view class='c-list'>
+    <view class='title'>热门评论</view>
+    <view class='itm'>
+      <image src='http://qiniu1.huzerui.com/17-9-30/51986108.jpg' alt=""></image>
+      <view>
+        <view class='flex-bx'>
+          <view>涂涂</view>
+          <view>
+            <view class='icon icon-home'></view>12
+          </view>
+        </view>
+        <view class='flex-bx'>
+          <view>1小时前</view>
+          <view>
+            <view class='icon icon-home'></view>
+          </view>
+        </view>
+        <!-- 回复他人的评论  -->
+        <!-- <view>
+        <view>回复勿忘初心： 你这话有错误</view>
+          <view>勿忘初心：我感觉这首歌不好听</view>
+        </view> -->
+        <!-- 不是回复他人的评论  -->
+        <view class='flex-bx'>
+           <view>我的评论</view>
+        </view>
+      </view>
+    </view>
+    
+    
+  </view>
+
+
+  <!-- 全部评论  -->
+  <view class='c-list'>
+    <view class='title'>全部评论</view>
+    <view class='itm'>
+      <image src='http://qiniu1.huzerui.com/17-9-30/51986108.jpg' alt=""></image>
+      <view>
+        <view class='flex-bx'>
+          <view>涂涂</view>
+          <view>
+            <view class='icon icon-home'></view>12
+          </view>
+        </view>
+        <view class='flex-bx'>
+          <view>1小时前</view>
+          <view>
+            <view class='icon icon-home'></view>
+          </view>
+        </view>
+        <!-- 回复他人的评论  -->
+        <!-- <view>
+        <view>回复勿忘初心： 你这话有错误</view>
+          <view>勿忘初心：我感觉这首歌不好听</view>
+        </view> -->
+        <!-- 不是回复他人的评论  -->
+        <view class='flex-bx'>
+           <view>我的评论</view>
+        </view>
+      </view>
+    </view>
+
+
+  </view>
+
+
+</view>

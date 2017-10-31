@@ -4,7 +4,8 @@
     "pages/search/index",
     "pages/tools/index",
     "pages/collect/index",
-    "pages/detail/index"
+    "pages/detail/index",
+    "pages/comment/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -14,7 +14,12 @@
   position: relative;
   font-size: 18px;
 }
-.m-detail .title .icon{
+.m-detail .title .icon-comment{
+  position: absolute;
+  left: 60rpx;
+  top: 0;
+}
+.m-detail .title .icon-love-true,.m-detail .title .icon-love-false{
   position: absolute;
   right: 60rpx;
   top: 0;

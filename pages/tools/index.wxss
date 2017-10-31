@@ -24,11 +24,12 @@
   display: flex;
 }
 .flex-itm{
-  flex: 1;
+  flex: 0 1 50%;
 }
 .title-bx{
   border-top: 2px solid #666;
   border-bottom: 1px solid #aaa;
+  padding: 0 10px;
 }
 .title-bx .flex-itm{
   padding: 10px;
@@ -38,6 +39,9 @@
   box-sizing: border-box;
   padding: 10px;
   border-right: 1px solid #fff;
+}
+.content-bx .sound-name,.content-bx .sound-type{
+  padding: 0 10px;
 }
 .content-bx .sound-name .item.active{
   background-color: #5F98FD;
@@ -51,8 +55,12 @@
   content: "";
   position: absolute;
   bottom: 0;
-  width: 80%;
+  width: 100%;
   height: 1px;
-  background-color: #aaa;
-  left: 10px;
+  background-color: #aeaeae;
+  left: 0;
+}
+
+.m-chord-image{
+  text-align: center;
 }

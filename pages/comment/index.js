@@ -23,7 +23,7 @@ Page({
             return obj2.star - obj1.star
           })
           res = res.slice(0, 5);
-          res = res.map(obj=>{
+          res = res.filter(obj=>{
             return obj.star > 1
           })
           this.setData({

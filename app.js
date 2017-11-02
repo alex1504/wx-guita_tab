@@ -17,7 +17,7 @@ App({
         //---
         _this.globalData.from = nickName;
         _this.globalData.fromAvatar = avatarUrl;
-        console.log(_this.globalData)
+        console.log(res)
         
         
       }

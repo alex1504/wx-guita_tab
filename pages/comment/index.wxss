@@ -1,3 +1,6 @@
+page{
+  background-color: #fff;
+}
 .font-grey{
   color: #8f8f8f;
 }
@@ -113,6 +116,6 @@ textarea{
   padding: 10px;
   margin-top: 10px;
 }
-.c-list .icon-good{
+.c-list .icon-good, .c-list .icon-good-true{
   margin-right: 4px;
 }

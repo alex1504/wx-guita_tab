@@ -1,68 +1,88 @@
 <!-- 轮播图 -->
 <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
   <block wx:for="{{banner_list}}" wx:key="{{index}}">
-    <swiper-item bindtap="navigateToDetail"  data-id="{{item.href}}">
+    <swiper-item bindtap="navigateToDetail" data-id="{{item.href}}">
       <image src="{{item.image}}" class="slide-image" />
     </swiper-item>
   </block>
 </swiper>
 
 
-<!-- 列表  -->
 <view class='g-main'>
-{{test}}
-  <view class='m-list'>
-    <view class='item' bindtap="navigateToDetail" data-id="{{item.id}}" wx:for="{{guita_list}}" wx:key="{{index}}">
-      <image src="{{item.song_poster}}" mode="aspectFill"></image>
-      <view>
-        <text>{{item.song_name}}</text>
+  <view class='box1'>
+    <!-- 最热列表  -->
+    <view class='m-title flex-bx'>
+      <view class='hd'>最热</view>
+      <view class="sub">
+        <navigator url='/pages/list/index'>
+          查看全部
+          <text class='icon icon-right'></text>
+        </navigator>
       </view>
     </view>
-    <!-- <view class='item' bindtap='navigateToDetail'>
-      <image src='http://ory715icu.bkt.clouddn.com//17-6-30/3144809.jpg' mode="aspectFill"></image>
-      <view>
-        <text>老男孩吉他谱</text>
+    <view class='m-list'>
+      <view class='item flex-bx' bindtap="navigateToDetail" data-id="{{item.id}}" wx:for="{{hotestList}}" wx:key="{{index}}">
+        <view class='hd1'>
+          <image src="{{item.song_poster}}" mode="aspectFill"></image>
+        </view>
+        <view class='content hd'>
+          <view>{{item.song_name}}</view>
+          <view class='sub'>{{item.author_name}}</view>
+        </view>
+        <view>
+          <view class='icon icon-love-false' wx:if="{{item.love_flag == 1}}" catch:tap='setSongFlag' data-list="hotestList" data-index="{{index}}" data-id="{{item.id}}"></view>
+          <view class='icon icon-love-true' wx:if="{{item.love_flag == 2}}" catch:tap='setSongFlag' data-list="hotestList" data-index="{{index}}" data-id="{{item.id}}"></view>
+        </view>
       </view>
     </view>
-    <view class='item' bindtap='navigateToDetail'>
-      <image src='http://ory715icu.bkt.clouddn.com//17-6-30/3144809.jpg' mode="aspectFill"></image>
-      <view>
-        <text>老男孩吉他谱</text>
+  </view>
+
+  <view class='box2'>
+    <!-- 最新列表  -->
+    <view class='m-title flex-bx'>
+      <view class='hd'>最新</view>
+      <view class="sub">
+        <navigator url='/pages/list/index'>
+          查看全部
+          <text class='icon icon-right'></text>
+        </navigator>
       </view>
-    </view> -->
+    </view>
+    <view class='m-list'>
+      <view class='item flex-bx' bindtap="navigateToDetail" data-id="{{item.id}}" wx:for="{{latestList}}" wx:key="{{index}}">
+        <view class='hd1'>
+          <image src="{{item.song_poster}}" mode="aspectFill"></image>
+        </view>
+        <view class='content hd'>
+          <view>{{item.song_name}}</view>
+          <view class='sub'>{{item.author_name}}</view>
+        </view>
+        <view>
+          <view class='icon icon-love-false' wx:if="{{item.love_flag == 1}}" catch:tap='setSongFlag' data-list="latestList" data-index="{{index}}" data-id="{{item.id}}"></view>
+          <view class='icon icon-love-true' wx:if="{{item.love_flag == 2}}" catch:tap='setSongFlag' data-list="latestList" data-index="{{index}}" data-id="{{item.id}}"></view>
+        </view>
+      </view>
+    </view>
   </view>
 </view>
-
-
-
-
 <!-- 底部导航  -->
 <view class='m-nav'>
   <view class='z-active'>
     <navigator url='/pages/index/index' open-type='redirect'>
       <view class='icon icon-home'></view>
-      主页
+      <view>主页</view>
     </navigator>
-
   </view>
   <view>
     <navigator url='/pages/search/index' open-type='redirect'>
       <view class='icon icon-search'></view>
-      搜索
-    </navigator>
-
-  </view>
-  <view>
-    <navigator url='/pages/tools/index' open-type='redirect'>
-      <view class='icon icon-tool'></view>
-      工具
+      <view>搜索</view>
     </navigator>
   </view>
-
   <view>
-    <navigator url='/pages/collect/index' open-type='redirect'>
-      <view class='icon icon-love'></view>
-      收藏
+    <navigator url='/pages/userCenter/index' open-type='redirect'>
+      <view class='icon icon-user'></view>
+      <view>我的</view>
     </navigator>
   </view>
 </view>

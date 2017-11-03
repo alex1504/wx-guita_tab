@@ -5,7 +5,10 @@
     "pages/tools/index",
     "pages/collect/index",
     "pages/detail/index",
-    "pages/comment/index"
+    "pages/comment/index",
+    "pages/userCenter/index",
+    "pages/list/index",
+    "pages/feedback/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

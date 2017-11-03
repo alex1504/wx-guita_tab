@@ -17,7 +17,8 @@ Page({
     toAvatar: '',
     toContent: '',
     isFocus: false,
-    scrollTop: 0
+    scrollTop: 0,
+    openid: app.globalData.openid
   },
   scrollTopFun: function (e) {
     console.log(e)
@@ -32,7 +33,7 @@ Page({
     }
   },
   backToTop: function (e) {
-    var _top = this.data.scrollTop;
+    let _top = this.data.scrollTop;
     if (_top == 1) {
       _top = 0;
     } else {
@@ -54,6 +55,7 @@ Page({
 
   },
   loadComments(songId) {
+    const openid = this.data.openid
     return new Promise((resolve, reject) => {
       wx.showToast({
         icon: 'loading',
@@ -66,6 +68,13 @@ Page({
       API.getComments(songId)
         .then(res => {
           console.log(res);
+          res.forEach(obj=>{
+            if (obj.star_by && obj.star_by.indexOf(openid) !== -1){
+              obj.isStar = true;
+            }else{
+              obj.isStar = false;
+            }
+          })
           res = res.sort((obj1, obj2) => {
             return obj2.createdAt - obj1.createdAt
           })
@@ -89,7 +98,18 @@ Page({
   },
   toggleGoodComment(e) {
     const id = e.currentTarget.dataset.id;
-    console.log(e)
+    const openid = wx.getStorageSync('openid')
+    const songId = this.data.songId;
+    API.toggleLoveComment(openid, id)
+      .then(res => {
+        this.loadComments(songId)
+          .then(() => {
+            wx.showToast({
+              title: res.msg
+            })
+          })
+
+      })
   },
   replyComment(e) {
     const id = e.currentTarget.dataset.id;

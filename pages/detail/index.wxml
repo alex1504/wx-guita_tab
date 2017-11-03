@@ -1,6 +1,5 @@
 <!--  吉他谱详情  -->
 <view class='m-detail' wx-if="guita_detail">
-
   <view class='title'>
     <view class='icon icon-comment' bindtap='navigateToComment' data-id="{{guita_detail.id}}"></view>
     {{guita_detail.song_name}}

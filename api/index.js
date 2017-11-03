@@ -2,7 +2,7 @@ import Bmob from '../utils/bmob';
 import Util from '../utils/util.js'
 
 module.exports = {
-  getChords(page, limit) {
+  getChords(page, limit, orderBy) {
     page = typeof page == 'undefine' ? 1 : page;
     page = parseInt(page);
     return new Promise((resolve, reject) => {
@@ -11,6 +11,12 @@ module.exports = {
       limit = typeof limit == 'undefined' ? 10 : parseInt(limit);
       query.limit(limit);
       query.skip((page - 1) * limit);
+      if (orderBy && orderBy == 'view_count') {
+        query.descending('view_count');
+      }
+      if (orderBy && orderBy == 'createdAt') {
+        query.descending('createdAt');
+      }
       query.find({
         success: function (result) {
           result = result.map(obj => {
@@ -30,8 +36,8 @@ module.exports = {
   },
   getChordById(id) {
     return new Promise((resolve, reject) => {
-      var Guita_info = Bmob.Object.extend("guita_chord_info");
-      var query = new Bmob.Query(Guita_info);
+      const Guita_info = Bmob.Object.extend("guita_chord_info");
+      const query = new Bmob.Query(Guita_info);
       query.get(id, {
         success: function (result) {
           resolve({
@@ -47,15 +53,15 @@ module.exports = {
   },
   searchChord(queryString) {
     return new Promise((resolve, reject) => {
-      var Guita_info = Bmob.Object.extend("guita_chord_info");
+      const Guita_info = Bmob.Object.extend("guita_chord_info");
 
-      var songQuery = new Bmob.Query(Guita_info);
+      const songQuery = new Bmob.Query(Guita_info);
       songQuery.equalTo("song_name", queryString);
 
-      var authorQuery = new Bmob.Query(Guita_info);
+      const authorQuery = new Bmob.Query(Guita_info);
       authorQuery.equalTo("author_name", queryString);
 
-      var mainQuery = Bmob.Query.or(songQuery, authorQuery);
+      const mainQuery = Bmob.Query.or(songQuery, authorQuery);
 
 
       mainQuery.find({
@@ -77,11 +83,11 @@ module.exports = {
   // 收藏或取消收藏 1：收藏  2：取消收藏
   setCollectNum(id, flag) {
     return new Promise((resolve, reject) => {
-      var Guita_info = Bmob.Object.extend("guita_chord_info");
-      var query = new Bmob.Query(Guita_info);
+      const Guita_info = Bmob.Object.extend("guita_chord_info");
+      const query = new Bmob.Query(Guita_info);
       query.get(id, {
         success: function (res) {
-          var num = res.attributes.collect_count;
+          let num = res.attributes.collect_count;
           num = flag == 1 ? num + 1 : num - 1;
           num = num < 0 ? 0 : num;
           res.set('collect_count', parseInt(num));
@@ -117,11 +123,11 @@ module.exports = {
   // 增加访问统计
   setViewNum(id) {
     return new Promise((resolve, reject) => {
-      var Guita_info = Bmob.Object.extend("guita_chord_info");
-      var query = new Bmob.Query(Guita_info);
+      const Guita_info = Bmob.Object.extend("guita_chord_info");
+      const query = new Bmob.Query(Guita_info);
       query.get(id, {
         success: function (res) {
-          var num = res.attributes.view_count;
+          let num = res.attributes.view_count;
           num += 1;
           res.set('view_count', parseInt(num));
           res.save();
@@ -135,14 +141,14 @@ module.exports = {
   },
   getComments(songId) {
     return new Promise((resolve, reject) => {
-      var Comment = Bmob.Object.extend("comment");
+      const Comment = Bmob.Object.extend("comment");
 
-      var query = new Bmob.Query(Comment);
+      const query = new Bmob.Query(Comment);
       query.equalTo("songId", songId);
 
       query.find({
         success: function (result) {
-          // console.log(result)
+          console.log(result)
           result = result.map(obj => {
             return {
               id: obj.id,
@@ -161,8 +167,8 @@ module.exports = {
   },
   addComment(obj) {
     return new Promise((resolve, reject) => {
-      var Comment = Bmob.Object.extend("comment");
-      var comment = new Comment();
+      const Comment = Bmob.Object.extend("comment");
+      const comment = new Comment();
       comment.set("songId", obj.songId);
       comment.set("toContent", obj.toContent || "");
       comment.set("toAvatar", obj.toAvatar || "");
@@ -181,24 +187,59 @@ module.exports = {
       });
     })
   },
-  // 点赞评论或取消点赞评论 id -> 评论id  flag -> 1：点赞  2：取消点赞
-  toggleLoveComment(id, flag) {
+
+  // 点赞评论或取消点赞评论 openid->用户唯一标识  id -> 评论id
+  toggleLoveComment(openid, id) {
     return new Promise((resolve, reject) => {
-      var Comment = Bmob.Object.extend("comment");
-      var query = new Bmob.Query(Comment);
+      const Comment = Bmob.Object.extend("comment");
+      const query = new Bmob.Query(Comment);
       query.get(id, {
         success: function (res) {
-          var num = res.attributes.star;
-          num = flag == 1 ? num + 1 : num - 1;
-          num = num < 0 ? 0 : num;
-          res.set('star', parseInt(num));
-          res.save();
-          resolve(res);
+          console.log(res)
+          const star_by = res.attributes.star_by || [];
+          let star = res.attributes.star || 0;
+          const index = star_by && star_by.indexOf(openid)
+          if (index === -1) {
+            res.set('star', ++star);
+            star_by.push(openid)
+            res.set('star_by', star_by);
+            res.save().then(res => {
+              resolve({
+                msg: '点赞'
+              })
+            })
+          } else {
+            res.set('star', --star);
+            star_by.splice(index, 1)
+            res.set('star_by', star_by);
+            res.save().then(res => {
+              resolve({
+                msg: '取消点赞'
+              })
+            })
+          }
         },
         error: function (object, error) {
           reject(error);
         }
       });
     })
+
   },
+  submitFeedback(contact, feedback) {
+    return new Promise((resolve, reject) => {
+      const Feedback = Bmob.Object.extend("feedback");
+      const feedbackIns = new Feedback();
+      feedbackIns.set("contact", contact);
+      feedbackIns.set("feedback", feedback);
+      feedbackIns.save(null, {
+        success: function (res) {
+          resolve(res)
+        },
+        error: function (result, err) {
+          reject(err)
+        }
+      });
+    })
+  }
 }

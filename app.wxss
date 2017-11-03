@@ -1,13 +1,12 @@
 /*  icon  */
 @font-face {
   font-family: 'iconfont';  /* project id 431644 */
-  src: url('//at.alicdn.com/t/font_431644_boocimdglrk65hfr.eot');
-  src: url('//at.alicdn.com/t/font_431644_boocimdglrk65hfr.eot?#iefix') format('embedded-opentype'),
-  url('//at.alicdn.com/t/font_431644_boocimdglrk65hfr.woff') format('woff'),
-  url('//at.alicdn.com/t/font_431644_boocimdglrk65hfr.ttf') format('truetype'),
-  url('//at.alicdn.com/t/font_431644_boocimdglrk65hfr.svg#iconfont') format('svg');
+  src: url('//at.alicdn.com/t/font_431644_9wf6yyl33z7ojemi.eot');
+  src: url('//at.alicdn.com/t/font_431644_9wf6yyl33z7ojemi.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_431644_9wf6yyl33z7ojemi.woff') format('woff'),
+  url('//at.alicdn.com/t/font_431644_9wf6yyl33z7ojemi.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_431644_9wf6yyl33z7ojemi.svg#iconfont') format('svg');
 }
-
 .icon{
   display: inline-block;
   font-family: 'iconfont';
@@ -49,10 +48,7 @@
   font-size: 14px;
   color: #e61b40;
 }
-.icon-about::before{
-  content: "\e661";
-  color: #000;
-}
+
 .icon-comment::before{
   content: "\e69a";
   color: #e61b40;
@@ -60,16 +56,33 @@
 .icon-good::before{
   content: "\e637";
   color:#666;
-
+}
+.icon-good-true::before{
+  content: "\e637";
+   color: #e61b40;
 }
 .icon-reply::before{
   content: "\e764";
   color:#666;
-
 }
+.icon-user::before{
+  content: "\e603";
+}
+.icon-right::before{
+  content: "\e604";
+  color:#666;
+}
+.icon-feedback::before{
+  content: "\e615";
+}
+.icon-about::before{
+  content: "\e713";
+}
+
 /*  global  */
 page{
   font-size: 14px;
+  background-color: #efeff4;
 }
 
 .container {
@@ -94,19 +107,24 @@ image{
   position: fixed;
   background-color: #fff;
   width: 100%;
-  height: 88rpx;
-  line-height: 88rpx;
+  height: 100rpx;
   bottom: 0;
   left: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
-  box-shadow: 0 0px 10px 0 #c3d3d7;
+  border-top: 1px solid #ccc;
+}
+.m-nav .icon{
+  font-size: 46rpx;
 }
 .m-nav>view{
   flex: 1;
   height: 100%;
+}
+.m-nav>view navigator{
+  padding: 10rpx 0;
 }
 .m-nav>view.z-active navigator{
   color: #5F98FD;

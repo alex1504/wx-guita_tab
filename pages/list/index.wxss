@@ -1,23 +1,36 @@
-/**index.wxss**/
-swiper{
-  height: 300rpx;
+page{
+    background-color: #fff;
 }
-swiper image{
-  width: 100%;
-}
-
-
-/* title  */
-.m-title{
-  padding: 20rpx;
+.m-tab{
+  display: flex;
+  height: 60rpx;
   background-color: #fff;
+  text-align: center;
+  position: relative;
 }
-
-.box2{
-  margin-top: 10px;
+.m-tab .itm{
+  position: relative;
+  flex: 1;
 }
-
-
+/* .m-tab .itm.z-active::after{
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4rpx;
+  width: 100%;
+  background-color: red;
+} */
+.m-tab .slider{
+  position: absolute;
+  height: 4rpx;
+  left: 0;
+  width: 50%;
+  bottom: 0;  
+  background-color: red;
+  transform: translateX(0)
+}
 
 /*  list  */
 .flex-bx{
@@ -31,7 +44,6 @@ swiper image{
   flex-basis: 40px;
 }
 .m-list{
-  background-color: #fff;
   padding: 20rpx;
   display: flex;
   flex-wrap: wrap;

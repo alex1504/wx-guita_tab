@@ -1,7 +1,10 @@
+page{
+  background-color: #fff;
+}
 /*  吉他谱详情  */
 .m-detail{
   text-align: center;
-  margin-top: 10px;
+  background-color: #fff;
 }
 .m-detail image{
   margin-top: 20rpx;

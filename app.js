@@ -17,16 +17,72 @@ App({
         //---
         _this.globalData.from = nickName;
         _this.globalData.fromAvatar = avatarUrl;
-        console.log(res)
-        
-        
+        console.log(_this.globalData)
       }
     })
+    this.login()
   },
   globalData: {
-    guita_list: null,
-    banner_list:null,
-    page: 1,
-    isLoadAll: false
+    hotestList: null,
+    latestList: null,
+    hotList:null,
+    hotListPage: 1,
+    isLoadAllHot: false,
+    newList: null,
+    newListPage: 1,
+    isLoadAllNew: false,
+    banner_list: null,
+  },
+  login() {
+    var user = new Bmob.User();
+    var _this = this;
+    var newOpenid = wx.getStorageSync('openid')
+    if(newOpenid){
+      this.globalData.openid = newOpenid;
+      return;
+    }
+    wx.login({
+      success: function (res) {
+        user.loginWithWeapp(res.code).then(function (user) {
+          var openid = user.get("authData").weapp.openid;
+          _this.globalData.openid = openid;
+          if (user.get("nickName")) {
+            wx.setStorageSync('openid', openid)
+          } else {
+            //注册成功的情况
+            var u = Bmob.Object.extend("_User");
+            var query = new Bmob.Query(u);
+            query.get(user.id, {
+              success: function (result) {
+                wx.setStorageSync('own', result.get("uid"));
+              },
+              error: function (result, error) {
+                console.log("查询失败");
+              }
+            });
+            //保存用户其他信息，比如昵称头像之类的
+            wx.getUserInfo({
+              success: function (result) {
+                var userInfo = result.userInfo;
+                var nickName = userInfo.nickName;
+                var avatarUrl = userInfo.avatarUrl;
+                var u = Bmob.Object.extend("_User");
+                var query = new Bmob.Query(u);
+                query.get(user.id, {
+                  success: function (result) {
+                    result.set('nickName', nickName);
+                    result.set("userPic", avatarUrl);
+                    result.set("openid", openid);
+                    result.save();
+                  }
+                });
+              }
+            });
+          }
+        }, function (err) {
+          console.log(err, 'errr');
+        });
+      }
+    });
   }
 })

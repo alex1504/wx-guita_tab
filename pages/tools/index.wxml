@@ -50,13 +50,6 @@
     </navigator>
 
   </view>
-  <view class='z-active'>
-    <navigator url='/pages/tools/index' open-type='redirect'>
-      <view class='icon icon-tool'></view>
-      工具
-    </navigator>
-  </view>
-
   <view>
     <navigator url='/pages/collect/index' open-type='redirect'>
       <view class='icon icon-love'></view>

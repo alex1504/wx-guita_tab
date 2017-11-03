@@ -1,16 +1,16 @@
-/*  搜索列表  */
-
+page{
+  background-color: #fff;
+}
 .m-list {
   padding: 20rpx;
-
 }
 
 .m-list .item {
   display: flex;
   align-items: flex-start;
-  border: 1px solid #efeff4;
-  height: 150rpx;
-  background-color: rgba(240, 240, 240, 0.6);
+  height: 120rpx;
+  border-bottom: 1px solid #f3f3f3;
+  padding-bottom: 10px;
 }
 
 .m-list .item:nth-child(n+1) {
@@ -23,7 +23,7 @@
 }
 
 .m-list .item-hd {
-  flex-basis: 150rpx;
+  flex-basis: 120rpx;
   height: 100%;
   margin-right: 20rpx;
 }
@@ -46,4 +46,45 @@
 .m-list .tip {
   color: #cad3d7;
   text-align: center;
+}
+
+/*  热门搜索  */
+
+.m-hot {
+  padding: 20rpx;
+}
+
+.m-hot .title {
+  font-size: 30rpx;
+  position: relative;
+  padding-left: 10px;
+}
+
+.m-hot .title::before {
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: "";
+  display: block;
+  width: 4px;
+  height: 100%;
+  background-color: #b2d2f5;
+}
+
+.m-hot .tag-wrap {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.m-hot .tag {
+  border: 1px solid #b2d2f5;
+  padding: 12rpx 30rpx;
+}
+
+.m-hot .tag {
+  margin-top: 20rpx;
+  margin-right: 10rpx;
 }

@@ -52,7 +52,12 @@
           <view class='flex-bx'>
             <view class='font-grey'>{{item.from}}</view>
             <view bindtap='toggleGoodComment' data-id="{{item.id}}">
-              <view class='icon icon-good'></view>{{item.star}}
+              <block wx:if="{{!item.isStar}}">
+                <view class='icon icon-good'></view>{{item.star}}
+              </block>
+              <block wx:if="{{item.isStar}}">
+                <view class='icon icon-good-true'></view>{{item.star}}
+              </block>
             </view>
           </view>
           <view class='flex-bx'>

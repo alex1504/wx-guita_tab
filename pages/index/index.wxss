@@ -1,6 +1,11 @@
 /**index.wxss**/
 swiper{
-  height: 300rpx;
+  height: 400rpx;
+}
+swiper-item{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 swiper image{
   width: 100%;

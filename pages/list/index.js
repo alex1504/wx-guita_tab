@@ -127,7 +127,7 @@ Page({
     if(this.data.activeTab == 0){
       this.loadHotList(app.globalData.hotListPage);
     }else{
-      this.loadNewList(app.globalData.hotListPage);
+      this.loadNewList(app.globalData.newListPage);
     }
   },
   // 收藏或取消收藏

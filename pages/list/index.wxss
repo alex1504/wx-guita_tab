@@ -3,7 +3,8 @@ page{
 }
 .m-tab{
   display: flex;
-  height: 60rpx;
+  height: 88rpx;
+  line-height: 88rpx;
   background-color: #fff;
   text-align: center;
   position: relative;
@@ -12,23 +13,13 @@ page{
   position: relative;
   flex: 1;
 }
-/* .m-tab .itm.z-active::after{
-  content: "";
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 4rpx;
-  width: 100%;
-  background-color: red;
-} */
 .m-tab .slider{
   position: absolute;
-  height: 4rpx;
+  height: 6rpx;
   left: 0;
   width: 50%;
   bottom: 0;  
-  background-color: red;
+  background-color: #e61b40;
   transform: translateX(0)
 }
 

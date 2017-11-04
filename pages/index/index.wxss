@@ -1,6 +1,6 @@
 /**index.wxss**/
 swiper{
-  height: 400rpx;
+  height: 380rpx;
 }
 swiper-item{
   display: flex;

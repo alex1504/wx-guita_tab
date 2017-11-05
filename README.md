@@ -26,7 +26,7 @@
 ## WechatApp·Pocket Guita
 Using Wechat to scan the qrcode for preview
 
-![qrcode](https://raw.githubusercontent.com/alex1504/wx-guita_tab/master/assets/qrcode.png)
+![qrcode](http://qiniu1.huzerui.com/17-10-19/9711670.jpg)
 
 ## Functions
 - [x] Page loading and configurable carousel figure

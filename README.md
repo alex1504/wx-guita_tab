@@ -20,12 +20,7 @@
 2. 吉他谱数据使用nodejs爬虫抓取自[17吉他网](http://www.17jita.com/)，爬虫脚本请点击[这里](https://github.com/alex1504/guita_tab-scratch)，侵删请发邮件至<a href="mailto:me@huzerui.com">me@huzerui.com</a>告知
 3. 小程序核心功能是快速搜谱，除谱子外的图片使用[七牛云存储](https://www.qiniu.com/)。
 4. 更详细的小程序开发流程请点击[这里]()
-
-## 捐赠
-若项目对您有所帮助，别忘了star支持一下，或者使用支付宝或微信捐赠打赏：
-![support](http://qiniu1.huzerui.com/17-11-5/43855555.jpg)
-您的支持是我前进的动力
-
+5. 若项目对你有所帮助，别忘了**star**一下。
 
 # EN:
 ## WechatApp·Pocket Guita
@@ -49,3 +44,5 @@ Using Wechat to scan the qrcode for preview
 2. Guita tabs data was scratched from [17吉他网](http://www.17jita.com/) using nodejs，scripts click [here](https://github.com/alex1504/guita_tab-scratch)，If infringing, please let me know by sending email to <a href="mailto:me@huzerui.com">me@huzerui.com</a>
 3. The app aims at providing easy tabs searching, all images stored in qiniu excepts tabs.
 4. More detailed project completion process, please click[here]()
+5. If the project is useful for you, don't forget to **star**it.
+

@@ -2,7 +2,7 @@
 ## 微信小程序·口袋吉他
 用微信扫描二维码预览
 
-![小程序二维码](https://raw.githubusercontent.com/alex1504/wx-guita_tab/master/assets/qrcode.png)
+![小程序二维码](http://qiniu1.huzerui.com/17-10-19/9711670.jpg)
 
 ## 功能说明
 - [x] 分页加载及可配置轮播图

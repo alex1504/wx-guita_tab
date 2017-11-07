@@ -8,7 +8,8 @@
     "pages/comment/index",
     "pages/userCenter/index",
     "pages/list/index",
-    "pages/feedback/index"
+    "pages/feedback/index",
+    "pages/about/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

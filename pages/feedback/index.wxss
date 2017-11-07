@@ -10,6 +10,7 @@
 }
 .m-fb .input input{
   padding: 0 10px;
+  height: 100%;
 }
 .m-fb .textarea{
   height: 300rpx;

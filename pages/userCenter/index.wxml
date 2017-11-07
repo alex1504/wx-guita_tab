@@ -54,17 +54,19 @@
       </view>
     </view>
   </navigator>
-  <view class='item'>
-    <view class='hd'>
-      <view class='u-tag u-tag-4'>
-        <text class='icon icon-about'></text>
+  <navigator url='/pages/about/index'>
+    <view class='item'>
+      <view class='hd'>
+        <view class='u-tag u-tag-4'>
+          <text class='icon icon-about'></text>
+        </view>
+        <text class='title'>关于项目</text>
       </view>
-      <text class='title'>关于项目</text>
+      <view>
+        <text class='icon icon-right'></text>
+      </view>
     </view>
-    <view>
-      <text class='icon icon-right'></text>
-    </view>
-  </view>
+  </navigator>
 </view>
 
 

@@ -9,11 +9,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-    tabs: ['最热','最新'],
+    tabs: ['最热', '最新'],
     activeTab: 0,
     hotList: []
   },
-  changeTab(e){
+  changeTab(e) {
     const index = e.currentTarget.dataset.index;
     this.setData({
       activeTab: index
@@ -26,9 +26,21 @@ Page({
       url: '../detail/index?id=' + id
     })
   },
-  onLoad: function () {
-    console.log(111)
+  onLoad: function (options) {
+    this.setActiveTab(options.type)
     this.getGuitaData();
+  },
+  setActiveTab(type) {
+    if (type == 'hot') {
+      this.setData({
+        activeTab: 0
+      })
+    }
+    if (type == 'new') {
+      this.setData({
+        activeTab: 1
+      })
+    }
   },
   getGuitaData() {
     this.setData({
@@ -39,13 +51,13 @@ Page({
       this.setData({
         hotList: app.globalData.hotList
       })
-    }else{
+    } else {
       wx.showLoading({
         title: '加载中'
       })
       this.loadHotList(app.globalData.hotListPage)
     }
-    
+
     if (app.globalData.newList) {
       this.setData({
         newList: app.globalData.newList
@@ -124,9 +136,9 @@ Page({
       })
   },
   onReachBottom() {
-    if(this.data.activeTab == 0){
+    if (this.data.activeTab == 0) {
       this.loadHotList(app.globalData.hotListPage);
-    }else{
+    } else {
       this.loadNewList(app.globalData.newListPage);
     }
   },

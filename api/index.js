@@ -51,34 +51,109 @@ module.exports = {
       });
     })
   },
+  // 从bmob查谱子
   searchChord(queryString) {
+    const _this = this;
     return new Promise((resolve, reject) => {
       const Guita_info = Bmob.Object.extend("guita_chord_info");
-
       const songQuery = new Bmob.Query(Guita_info);
       songQuery.equalTo("song_name", queryString);
 
       const authorQuery = new Bmob.Query(Guita_info);
       authorQuery.equalTo("author_name", queryString);
 
-      const mainQuery = Bmob.Query.or(songQuery, authorQuery);
+      const stringQuery = new Bmob.Query(Guita_info);
+      stringQuery.equalTo("query", queryString);
 
-
+      const mainQuery = Bmob.Query.or(songQuery, authorQuery, stringQuery);
       mainQuery.find({
         success: function (result) {
-          result = result.map(obj => {
-            return {
-              id: obj.id,
-              ...obj.attributes
-            }
-          });
-          resolve(result)
+          console.log(result)
+          console.log('---------')
+          if (result.length) {
+            result = result.map(obj => {
+              return {
+                id: obj.id,
+                ...obj.attributes
+              }
+            });
+            resolve(result)
+          } else {
+            // 若数据库不存在，则爬取
+            _this.scratchChords(queryString)
+              .then(result => {
+                resolve(result)
+              }).catch(err=>{
+                console.log(err)
+              })
+          }
         },
         error: function (result, error) {
           resolve(error)
         }
       });
     })
+  },
+  // 从吉他谱网抓取谱子
+  scratchChords(queryString) {
+    const _this = this
+    return new Promise((resolve, reject) => {
+      wx.request({
+        url: `https://guita.huzerui.com:3002/search?s=${queryString}`,
+        success(res) {
+          const arr = res.data;
+          if (!arr.length) {
+            resolve([]);
+            return;
+          }
+          _this.addChords(arr,queryString)
+            .then(res => {
+              resolve(res)
+            }).catch(err => {
+              reject(err)
+            })
+        },
+        fail(){
+          reject()
+        }
+      })
+    })
+  },
+  // 添加谱子到bmob
+  addChords(chordArr,queryString) {
+    const promises = chordArr.map(obj => {
+      return new Promise((resolve, reject) => {
+        var Chord = Bmob.Object.extend("guita_chord_info");
+        var chord = new Chord();
+        chord.set("view_count", obj.view_count);
+        chord.set("search_count", obj.search_count);
+        chord.set("state", obj.state);
+        chord.set("author_name", obj.author_name);
+        chord.set("chord_images", obj.chord_images);
+        chord.set("song_name", obj.song_name);
+        chord.set("song_poster", obj.song_poster);
+        chord.set("collect_count", obj.collect_count || 0);
+        chord.set("query", queryString);
+        chord.save(null, {
+          success: function (res) {
+            resolve(res)
+          },
+          error: function (res, err) {
+            reject(err)
+          }
+        });
+      })
+    })
+    return new Promise((resolve, reject) => {
+      Promise.all(promises)
+        .then(res => {
+          resolve(res)
+        }).catch(err => {
+          reject(err)
+        })
+    })
+
+
   },
   // 收藏或取消收藏 1：收藏  2：取消收藏
   setCollectNum(id, flag) {

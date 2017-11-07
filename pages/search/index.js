@@ -26,8 +26,9 @@ Page({
     })
     API.searchChord(searchTxt)
       .then(res => {
+        console.log(res)
         wx.hideLoading();
-        if (res.length == 0) {
+        if (!res || res && res.length == 0) {
           this.setData({
             isTipShow: true
           })

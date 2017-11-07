@@ -1,9 +1,13 @@
-
+import API from './api/index.js'
 const Bmob = require('./utils/bmob.js');
 Bmob.initialize("c92d74832497129e2f4a5ece80414d22", "e3e54449888e0554b8c5e8fb1279b671");
 
 App({
   onLaunch: function () {
+    // API.scratchChords('告白气球')
+    //   .then(res => {
+    //     console.log(res)
+    //   })
     const _this = this;
     wx.getUserInfo({
       success: function (res) {
@@ -25,7 +29,7 @@ App({
   globalData: {
     hotestList: null,
     latestList: null,
-    hotList:null,
+    hotList: null,
     hotListPage: 1,
     isLoadAllHot: false,
     newList: null,
@@ -37,7 +41,7 @@ App({
     var user = new Bmob.User();
     var _this = this;
     var newOpenid = wx.getStorageSync('openid')
-    if(newOpenid){
+    if (newOpenid) {
       this.globalData.openid = newOpenid;
       return;
     }

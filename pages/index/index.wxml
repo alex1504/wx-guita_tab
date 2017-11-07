@@ -14,7 +14,7 @@
     <view class='m-title flex-bx'>
       <view class='hd'>最热</view>
       <view class="sub">
-        <navigator url='/pages/list/index'>
+        <navigator url='/pages/list/index?type=hot'>
           查看全部
           <text class='icon icon-right'></text>
         </navigator>
@@ -42,7 +42,7 @@
     <view class='m-title flex-bx'>
       <view class='hd'>最新</view>
       <view class="sub">
-        <navigator url='/pages/list/index'>
+        <navigator url='/pages/list/index?type=new'>
           查看全部
           <text class='icon icon-right'></text>
         </navigator>

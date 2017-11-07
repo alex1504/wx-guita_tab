@@ -24,29 +24,3 @@
   </view>
 
 </view>
-
-
-<!-- 底部导航  -->
-<view class='m-nav'>
-  <view>
-    <navigator url='/pages/index/index' open-type='redirect'>
-      <view class='icon icon-home'></view>
-      主页
-    </navigator>
-
-  </view>
-  <view>
-    <navigator url='/pages/search/index' open-type='redirect'>
-      <view class='icon icon-search'></view>
-      搜索
-    </navigator>
-
-  </view>
-
-  <view class='z-active'>
-    <navigator url='/pages/collect/index' open-type='redirect'>
-      <view class='icon icon-love'></view>
-      收藏
-    </navigator>
-  </view>
-</view>

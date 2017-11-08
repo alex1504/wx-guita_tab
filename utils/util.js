@@ -1,13 +1,12 @@
 module.exports = {
   // param： date 毫秒时间戳
-  toRecentStr(dateStr) {
-    dateStr = parseInt(dateStr)
-    //获取js 时间戳
-    var time = new Date().getTime();
-    //去掉 js 时间戳后三位，与php 时间戳保持一致
-    time = parseInt((time - dateStr) / 1000);
-    //存储转换值 
-    var s;
+  toRecentStr(msTime) {
+    console.log(msTime)
+    console.log('---------------------')
+    let date = parseInt(msTime)
+    let time = new Date().getTime();
+    time = parseInt((time - date) / 1000);
+    let s;
     if (time < 60 * 10) {//十分钟内
       return '刚刚';
     } else if ((time < 60 * 60) && (time >= 60 * 10)) {
@@ -24,8 +23,9 @@ module.exports = {
       return s + "天前";
     } else {
       //超过3天
-      var date = new Date(parseInt(dateStr));
-      return date.getFullYear() + "/" + (date.getMonth() + 1) + "/" + date.getDate();
+      console.log(date)
+      let newDate = new Date(date);
+      return newDate.getFullYear() + "/" + (newDate.getMonth() + 1) + "/" + newDate.getDate();
     }
   }
 }

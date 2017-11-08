@@ -62,9 +62,6 @@ module.exports = {
       const authorQuery = new Bmob.Query(Guita_info);
       authorQuery.contains("author_name", queryString);
 
-      // const stringQuery = new Bmob.Query(Guita_info);
-      // stringQuery.equalTo("query", queryString);
-
       const mainQuery = Bmob.Query.or(songQuery, authorQuery);
       mainQuery.find({
         success: function (result) {
@@ -159,8 +156,6 @@ module.exports = {
           reject(err)
         })
     })
-
-
   },
   // 收藏或取消收藏 1：收藏  2：取消收藏
   setCollectNum(id, flag) {
@@ -232,10 +227,11 @@ module.exports = {
         success: function (result) {
           console.log(result)
           result = result.map(obj => {
+            let time = new Date(obj.createdAt).getTime()
             return {
               id: obj.id,
               createdAt: new Date(obj.createdAt).getTime(),
-              createdAtRecent: Util.toRecentStr(new Date(obj.createdAt).getTime()),
+              createdAtRecent: Util.toRecentStr(time),
               ...obj.attributes
             }
           });

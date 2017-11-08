@@ -11,16 +11,17 @@
 - [x] 搜索功能
 - [x] 吉他和弦查询
 - [x] 音频试听（暂未录入数据）
-- [ ] 曲谱评论、分享、保存本地
+- [x] 评论
+- [ ] 分享、保存本地
 - [ ] 用户系统
 - [ ] 图片加载交互优化
 
 ## 项目说明
 1. 使用bmob后端云提供数据服务
-2. 吉他谱数据使用nodejs爬虫抓取自[17吉他网](http://www.17jita.com/)，爬虫脚本请点击[这里](https://github.com/alex1504/guita_tab-scratch)，侵删请发邮件至<a href="mailto:me@huzerui.com">me@huzerui.com</a>告知
+2. 吉他谱数据初始数据使用nodejs爬虫抓取自[17吉他网](http://www.17jita.com/)，爬虫已开启定时任务每周一午夜更新曲谱；由于17吉他网搜索需要权限，因此部分曲谱抓取自[虫虫吉他](http://www.ccguitar.cn/)，已将虫虫吉他谱抓取封装成接口，示例：[http://guita.huzerui.com:3001/search?s=歌曲名或歌手名](http://guita.huzerui.com:3001/search?s=周杰伦)
 3. 小程序核心功能是快速搜谱，除谱子外的图片使用[七牛云存储](https://www.qiniu.com/)。
 4. 更详细的小程序开发流程请点击[这里]()
-5. 若项目对你有所帮助，别忘了**star**一下。
+5. 若项目对你有所帮助，别忘了**star**一下,你的支持是我前进的动力。
 
 # EN:
 ## WechatApp·Pocket Guita
@@ -35,14 +36,15 @@ Using Wechat to scan the qrcode for preview
 - [x] Guita tabs  searching
 - [x] Guitar chord query
 - [x] Audio listening（Not yet entered data）
-- [ ] Tsbs comments, share and saving
+- [x] Tabs comments
+- [ ] Tabs share and saving
 - [ ] User system 
 - [ ] Interactive optimization of picture loading
 
 ## Project Descriptions
 1. Using bmob to provide data service
-2. Guita tabs data was scratched from [17吉他网](http://www.17jita.com/) using nodejs，scripts click [here](https://github.com/alex1504/guita_tab-scratch)，If infringing, please let me know by sending email to <a href="mailto:me@huzerui.com">me@huzerui.com</a>
+2. Guitar spectrum data using nodejs initial data from [17 Guita Website](http://www.17jita.com/), crawler has opened the timing task every Monday at midnight for update; Dure to search restriction by 17 Guita website, some music scratch from [Chong Chong Guita Website](http://www.ccguitar.cn/), I already make it a interface, for example: [http://guita.huzerui.com:3001/search?s=songName|Singer](http://guita.huzerui.com:3001/search?s=周杰伦/)
 3. The app aims at providing easy tabs searching, all images stored in qiniu excepts tabs.
 4. More detailed project completion process, please click[here]()
-5. If the project is useful for you, don't forget to **star**it.
+5. If the project is useful for you, don't forget to **star**it, your support is my driving force.
 

@@ -57,36 +57,43 @@ module.exports = {
     return new Promise((resolve, reject) => {
       const Guita_info = Bmob.Object.extend("guita_chord_info");
       const songQuery = new Bmob.Query(Guita_info);
-      songQuery.equalTo("song_name", queryString);
+      songQuery.contains("song_name", queryString);
 
       const authorQuery = new Bmob.Query(Guita_info);
-      authorQuery.equalTo("author_name", queryString);
+      authorQuery.contains("author_name", queryString);
 
-      const stringQuery = new Bmob.Query(Guita_info);
-      stringQuery.equalTo("query", queryString);
+      // const stringQuery = new Bmob.Query(Guita_info);
+      // stringQuery.equalTo("query", queryString);
 
-      const mainQuery = Bmob.Query.or(songQuery, authorQuery, stringQuery);
+      const mainQuery = Bmob.Query.or(songQuery, authorQuery);
       mainQuery.find({
         success: function (result) {
           console.log(result)
           console.log('---------')
-          if (result.length) {
-            result = result.map(obj => {
-              return {
-                id: obj.id,
-                ...obj.attributes
-              }
-            });
-            resolve(result)
-          } else {
-            // 若数据库不存在，则爬取
-            _this.scratchChords(queryString)
-              .then(result => {
-                resolve(result)
-              }).catch(err=>{
-                console.log(err)
-              })
-          }
+          result = result.map(obj => {
+            return {
+              id: obj.id,
+              ...obj.attributes
+            }
+          });
+          resolve(result)
+          // if (result.length) {
+          //   result = result.map(obj => {
+          //     return {
+          //       id: obj.id,
+          //       ...obj.attributes
+          //     }
+          //   });
+          //   resolve(result)
+          // } else {
+          //   // 若数据库不存在，则爬取
+          //   _this.scratchChords(queryString)
+          //     .then(result => {
+          //       resolve(result)
+          //     }).catch(err=>{
+          //       console.log(err)
+          //     })
+          // }
         },
         error: function (result, error) {
           resolve(error)
@@ -99,7 +106,7 @@ module.exports = {
     const _this = this
     return new Promise((resolve, reject) => {
       wx.request({
-        url: `https://guita.huzerui.com:3002/search?s=${queryString}`,
+        url: `https://guita.huzerui.com:8002/search?s=${queryString}`,
         success(res) {
           const arr = res.data;
           if (!arr.length) {

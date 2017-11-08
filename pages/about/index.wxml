@@ -13,7 +13,7 @@
       <view>邮箱：me@huzerui.com</view>
     </view>
     <view class='itm'>
-      <view>本项目目前已开源，源码存放在了github，作为小程序开发的学习案例。</view>
+      <view>本项目目前已开源，源码存放在了github</view>
       <view>源码地址：<a href="#">https://github.com/alex1504/wx-guita_tab</a></view>
     </view>
     <view class='itm'>

@@ -227,10 +227,10 @@ module.exports = {
         success: function (result) {
           console.log(result)
           result = result.map(obj => {
-            let time = new Date(obj.createdAt).getTime()
+            let time = new Date(obj.createdAt.replace(/\s/,'T')).getTime()
             return {
               id: obj.id,
-              createdAt: new Date(obj.createdAt).getTime(),
+              createdAt: time,
               createdAtRecent: Util.toRecentStr(time),
               ...obj.attributes
             }

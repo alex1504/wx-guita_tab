@@ -28,8 +28,8 @@
             </view>
           </view>
           <view class='flex-bx'>
-            <view class='font-grey'>{{item.createdAtRecent}}</view>
-            <view bindtap='replyComment' data-id="{{item.id}}" data-from="{{item.from}}" data-fromAvatar="{{item.fromAvatar}}" data-content="{{item.content}}">
+            <view class='date-wrap font-grey'>{{item.createdAtRecent}}</view>
+            <view class='reply-wrap'bindtap='replyComment' data-id="{{item.id}}" data-from="{{item.from}}" data-fromAvatar="{{item.fromAvatar}}" data-content="{{item.content}}">
               <view class='icon icon-reply'></view>
             </view>
           </view>
@@ -66,8 +66,8 @@
             </view>
           </view>
           <view class='flex-bx'>
-            <view class='font-grey'>{{item.createdAtRecent}}</view>
-            <view bindtap='replyComment' data-id="{{item.id}}" data-from="{{item.from}}" data-fromAvatar="{{item.fromAvatar}}" data-content="{{item.content}}">
+            <view class='date-wrap font-grey'>{{item.createdAtRecent}}</view>
+            <view class='reply-wrap' bindtap='replyComment' data-id="{{item.id}}" data-from="{{item.from}}" data-fromAvatar="{{item.fromAvatar}}" data-content="{{item.content}}">
               <view class='icon icon-reply'></view>
             </view>
           </view>

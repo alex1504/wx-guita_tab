@@ -119,3 +119,14 @@ textarea{
 .c-list .icon-good, .c-list .icon-good-true{
   margin-right: 4px;
 }
+.c-list .date-wrap{
+  display: flex;
+  align-items: center;
+}
+.c-list .reply-wrap{
+  width:60rpx;
+  height:60rpx;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}

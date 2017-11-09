@@ -4,6 +4,11 @@
 
 ![小程序二维码](http://qiniu1.huzerui.com/17-10-19/9711670.jpg)
 
+## 项目截图
+![view1](http://qiniu1.huzerui.com/17-11-9/6887912.jpg)
+![view2](http://qiniu1.huzerui.com/17-11-9/75469062.jpg)
+![view3](http://qiniu1.huzerui.com/17-11-9/61787499.jpg)
+
 ## 功能说明
 - [x] 分页加载及可配置轮播图
 - [x] 吉他谱浏览及收藏数据统计
@@ -28,6 +33,11 @@
 Using Wechat to scan the qrcode for preview
 
 ![qrcode](http://qiniu1.huzerui.com/17-10-19/9711670.jpg)
+
+## Project Screenshot
+![view1](http://qiniu1.huzerui.com/17-11-9/6887912.jpg)
+![view2](http://qiniu1.huzerui.com/17-11-9/75469062.jpg)
+![view3](http://qiniu1.huzerui.com/17-11-9/61787499.jpg)
 
 ## Functions
 - [x] Page loading and configurable carousel figure

@@ -30,17 +30,19 @@
       </view>
     </view>
   </navigator>
-  <view class='item'>
-    <view class='hd'>
-      <view class='u-tag u-tag-2'>
-        <text class='icon icon-tool'></text>
+  <navigator url='/pages/tools/index'>
+    <view class='item'>
+      <view class='hd'>
+        <view class='u-tag u-tag-2'>
+          <text class='icon icon-tool'></text>
+        </view>
+        <text class='title'>和弦查询</text>
       </view>
-      <text class='title'>和弦查询</text>
+      <view>
+        <text class='icon icon-right'></text>
+      </view>
     </view>
-    <view>
-      <text class='icon icon-right'></text>
-    </view>
-  </view>
+  </navigator>
   <navigator url='/pages/feedback/index'>
     <view class='item'>
       <view class='hd'>

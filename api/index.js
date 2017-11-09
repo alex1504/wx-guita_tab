@@ -227,6 +227,7 @@ module.exports = {
         success: function (result) {
           console.log(result)
           result = result.map(obj => {
+            // 注意兼容new Date在ios中与chrome的差异
             let time = new Date(obj.createdAt.replace(/\s/,'T')).getTime()
             return {
               id: obj.id,

@@ -17,7 +17,8 @@
           {{item}}
         </view>
         <view wx:if="{{index == selectSoundName}}" class='item active' wx:key="{{index}}" bindtap='changeSoundName' data-index="{{index}}">
-          {{item}}
+          <view class='bd'>{{item}}</view>
+          <view class='icon icon-choose'></view>
         </view>
       </block>
     </view>
@@ -27,33 +28,10 @@
           {{item}}
         </view>
         <view wx:if="{{index == selectType}}" class='item active' wx:key="{{index}}" bindtap='changeType' data-index="{{index}}">
-          {{item}}
+          <view class='bd'>{{item}}</view>
+          <view class='icon icon-choose'></view>
         </view>
       </block>
     </view>
-  </view>
-</view>
-
-<!-- 底部导航  -->
-<view class='m-nav'>
-  <view>
-    <navigator url='/pages/index/index' open-type='redirect'>
-      <view class='icon icon-home'></view>
-      主页
-    </navigator>
-
-  </view>
-  <view>
-    <navigator url='/pages/search/index' open-type='redirect'>
-      <view class='icon icon-search'></view>
-      搜索
-    </navigator>
-
-  </view>
-  <view>
-    <navigator url='/pages/collect/index' open-type='redirect'>
-      <view class='icon icon-love'></view>
-      收藏
-    </navigator>
   </view>
 </view>

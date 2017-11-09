@@ -32,6 +32,15 @@ Page({
       });
     }
   },
+  // 兼容性较好
+  goTop: function (e) {
+    if (wx.pageScrollTo) {
+      wx.pageScrollTo({
+        scrollTop: 0
+      })
+    }
+  },
+  // 调试器没问题，真机下有问题
   backToTop: function (e) {
     let _top = this.data.scrollTop;
     if (_top == 1) {
@@ -127,7 +136,7 @@ Page({
       scrollTop: 0
     })
 
-    this.backToTop();
+    this.goTop();
     console.log(e)
   },
   cancleReplyTo() {

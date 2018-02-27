@@ -57,10 +57,12 @@ module.exports = {
     return new Promise((resolve, reject) => {
       const Guita_info = Bmob.Object.extend("guita_chord_info");
       const songQuery = new Bmob.Query(Guita_info);
-      songQuery.contains("song_name", queryString);
+      //songQuery.contains("song_name", queryString);
+      songQuery.equalTo("song_name", queryString);
 
       const authorQuery = new Bmob.Query(Guita_info);
-      authorQuery.contains("author_name", queryString);
+      //authorQuery.contains("author_name", queryString);
+      authorQuery.equalTo("author_name", queryString);
 
       const mainQuery = Bmob.Query.or(songQuery, authorQuery);
       mainQuery.find({

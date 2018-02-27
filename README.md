@@ -13,7 +13,7 @@
 - [x] 分页加载及可配置轮播图
 - [x] 吉他谱浏览及收藏数据统计
 - [x] 吉他谱收藏功能
-- [x] 搜索功能
+- [x] 搜索功能（不支持模糊查询，该API需升级bmob套餐使用）
 - [x] 吉他和弦查询
 - [x] 音频试听（暂未录入数据）
 - [x] 评论
@@ -43,7 +43,7 @@ Using Wechat to scan the qrcode for preview
 - [x] Page loading and configurable carousel figure
 - [x] Guitar tabs browsing and collection couting
 - [x] Guita tabs collecting
-- [x] Guita tabs  searching
+- [x] Guita tabs  searching（No fuzzy query is supported, and the API needs to upgrade the bmob package）
 - [x] Guitar chord query
 - [x] Audio listening（Not yet entered data）
 - [x] Tabs comments

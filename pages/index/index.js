@@ -92,7 +92,7 @@ Page({
     const loveSongs = this.data.loveSongs || [];
 
     const gethotestList = new Promise((resolve, reject) => {
-      API.getChords(page, 6, 'view_count')
+      API.getChords(page, 8, 'view_count')
         .then(res => {
           res.forEach(function (obj) {
             if (loveSongs.indexOf(obj.id) == -1) {
@@ -112,7 +112,7 @@ Page({
     })
 
     const getLatestList = new Promise((resolve, reject) => {
-      API.getChords(page, 6, 'createdAt')
+      API.getChords(page, 8, 'createdAt')
         .then(res => {
           res.forEach(function (obj) {
             if (loveSongs.indexOf(obj.id) == -1) {

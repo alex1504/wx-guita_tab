@@ -1,6 +1,16 @@
 page{
     background-color: #fff;
 }
+.tab-wrap{
+  position: fixed;
+  z-index: 99999999999999;
+  width: 100%;
+  left: 0;
+  top: 0;
+  height: 88rpx;
+  line-height: 88rpx;
+  background-color: #fff;
+}
 .m-tab{
   display: flex;
   height: 88rpx;

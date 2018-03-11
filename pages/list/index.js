@@ -12,25 +12,79 @@ Page({
     tabs: ['最热', '最新'],
     activeTab: 0,
     hotestList: [],
-    latestList: []
+    latestList: [],
+    isTabFix: false,
+    hotestListScrT: app.globalData.hotestListScrT || 0,
+    latestListScrT: app.globalData.latestListScrT || 0
   },
-  // 若globaldata变化了，重新更改视图
   onShow: function () {
+    // 若globaldata变化了，重新更改视图；恢复scrT位置
     let flag = wx.getStorageSync('globalChange')
-    if (!flag) {
-      return;
+    if (flag) {
+      this.setData({
+        hotestList: app.globalData.hotestList,
+        latestList: app.globalData.latestList
+      })
+      wx.setStorageSync('globalChange', false)
     }
-    this.setData({
-      hotestList: app.globalData.hotestList,
-      latestList: app.globalData.latestList
-    })
-    wx.setStorageSync('globalChange', false)
+  },
+  onReady(){
+    // 取回页面滚动距离
+    this.retrieveScrT()
+  },
+  // 取回页面滚动距离
+  retrieveScrT() {
+    if (wx.pageScrollTo) {
+      if (this.data.activeTab == 0) {
+        wx.pageScrollTo({
+          scrollTop: app.globalData.hotestListScrT || 0,
+          duration: 0
+        })
+      } else {
+        wx.pageScrollTo({
+          scrollTop: app.globalData.latestListScrT || 0,
+          duration: 0
+        })
+      }
+    }
+  },
+  onPageScroll(obj) {
+    if (this.data.activeTab == 0) {
+      if (obj.scrollTop >= 1000) {
+        this.setData({
+          isTabFix: true
+        })
+      } else {
+        this.setData({
+          isTabFix: false
+        })
+      }
+      this.setData({
+        hotestListScrT: obj.scrollTop
+      })
+      app.globalData.hotestListScrT = obj.scrollTop
+    } else {
+      if (obj.scrollTop >= 1000) {
+        this.setData({
+          isTabFix: true
+        })
+      } else {
+        this.setData({
+          isTabFix: false
+        })
+      }
+      this.setData({
+        latestListScrT: obj.scrollTop
+      })
+      app.globalData.latestListScrT = obj.scrollTop
+    }
   },
   changeTab(e) {
     const index = e.currentTarget.dataset.index;
     this.setData({
       activeTab: index
     })
+    this.retrieveScrT()
   },
   //事件处理函数
   navigateToDetail: function (e) {
@@ -116,6 +170,7 @@ Page({
       })
   },
   loadlatestList(latestListPage) {
+    console.log(latestListPage)
     if (app.globalData.isLoadAllNew) return;
     wx.showLoading({
       title: '加载中',

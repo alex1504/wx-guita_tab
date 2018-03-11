@@ -1,46 +1,56 @@
-<view class='m-tab'>
-  <block wx:for="{{tabs}}" wx:key="{{index}}">
-    <view wx:if="{{index != activeTab}}" class='itm' bindtap='changeTab' data-index="{{index}}">{{item}}</view>
-    <view wx:if="{{index == activeTab}}" class='itm z-active' bindtap='changeTab' data-index="{{index}}">{{item}}</view>
-  </block>
-  <view class='slider' style="transform:translateX({{activeTab*100}}%)"></view>
-</view>
-
-<!--  最热列表  -->
-<view wx:if="{{activeTab === 0}}">
-  <view class='m-list'>
-    <view class='item flex-bx' bindtap="navigateToDetail" data-id="{{item.id}}" wx:for="{{hotestList}}" wx:key="{{index}}">
-      <view class='hd1'>
-        <image src="{{item.song_poster}}" mode="aspectFill"></image>
-      </view>
-      <view class='content hd'>
-        <view>{{item.song_name}}</view>
-        <view class='sub'>{{item.author_name}}</view>
-      </view>
-      <view>
-        <view class='icon icon-love-false' wx:if="{{item.love_flag == 1}}" catch:tap='setSongFlag' data-list="hotestList" data-index="{{index}}" data-id="{{item.id}}"></view>
-        <view class='icon icon-love-true' wx:if="{{item.love_flag == 2}}" catch:tap='setSongFlag' data-list="hotestList" data-index="{{index}}" data-id="{{item.id}}"></view>
+<view class="tab-wrap" wx:if="{{isTabFix}}">
+    <view class='m-tab'>
+      <block wx:for="{{tabs}}" wx:key="{{index}}">
+        <view wx:if="{{index != activeTab}}" class='itm' bindtap='changeTab' data-index="{{index}}">{{item}}</view>
+        <view wx:if="{{index == activeTab}}" class='itm z-active' bindtap='changeTab' data-index="{{index}}">{{item}}</view>
+      </block>
+      <view class='slider' style="transform:translateX({{activeTab*100}}%)"></view>
+    </view>
+  </view>
+  
+  <view class='m-tab' wx:if="{{!isTabFix}}">
+    <block wx:for="{{tabs}}" wx:key="{{index}}">
+      <view wx:if="{{index != activeTab}}" class='itm' bindtap='changeTab' data-index="{{index}}">{{item}}</view>
+      <view wx:if="{{index == activeTab}}" class='itm z-active' bindtap='changeTab' data-index="{{index}}">{{item}}</view>
+    </block>
+    <view class='slider' style="transform:translateX({{activeTab*100}}%)"></view>
+  </view>
+  
+  <!--  最热列表  -->
+  <view wx:if="{{activeTab === 0}}">
+    <view class='m-list'>
+      <view class='item flex-bx' bindtap="navigateToDetail" data-id="{{item.id}}" wx:for="{{hotestList}}" wx:key="{{index}}">
+        <view class='hd1'>
+          <image src="{{item.song_poster}}" mode="aspectFill"></image>
+        </view>
+        <view class='content hd'>
+          <view>{{item.song_name}}</view>
+          <view class='sub'>{{item.author_name}}</view>
+        </view>
+        <view>
+          <view class='icon icon-love-false' wx:if="{{item.love_flag == 1}}" catch:tap='setSongFlag' data-list="hotestList" data-index="{{index}}" data-id="{{item.id}}"></view>
+          <view class='icon icon-love-true' wx:if="{{item.love_flag == 2}}" catch:tap='setSongFlag' data-list="hotestList" data-index="{{index}}" data-id="{{item.id}}"></view>
+        </view>
       </view>
     </view>
   </view>
-</view>
-
-
-<!--  最新列表  -->
-<view wx:if="{{activeTab === 1}}">
- <view class='m-list'>
-    <view class='item flex-bx' bindtap="navigateToDetail" data-id="{{item.id}}" wx:for="{{latestList}}" wx:key="{{index}}">
-      <view class='hd1'>
-        <image src="{{item.song_poster}}" mode="aspectFill"></image>
-      </view>
-      <view class='content hd'>
-        <view>{{item.song_name}}</view>
-        <view class='sub'>{{item.author_name}}</view>
-      </view>
-      <view>
-        <view class='icon icon-love-false' wx:if="{{item.love_flag == 1}}" catch:tap='setSongFlag' data-list="latestList" data-index="{{index}}" data-id="{{item.id}}"></view>
-        <view class='icon icon-love-true' wx:if="{{item.love_flag == 2}}" catch:tap='setSongFlag' data-list="latestList" data-index="{{index}}" data-id="{{item.id}}"></view>
+  
+  
+  <!--  最新列表  -->
+  <view wx:if="{{activeTab === 1}}">
+   <view class='m-list'>
+      <view class='item flex-bx' bindtap="navigateToDetail" data-id="{{item.id}}" wx:for="{{latestList}}" wx:key="{{index}}">
+        <view class='hd1'>
+          <image src="{{item.song_poster}}" mode="aspectFill"></image>
+        </view>
+        <view class='content hd'>
+          <view>{{item.song_name}}</view>
+          <view class='sub'>{{item.author_name}}</view>
+        </view>
+        <view>
+          <view class='icon icon-love-false' wx:if="{{item.love_flag == 1}}" catch:tap='setSongFlag' data-list="latestList" data-index="{{index}}" data-id="{{item.id}}"></view>
+          <view class='icon icon-love-true' wx:if="{{item.love_flag == 2}}" catch:tap='setSongFlag' data-list="latestList" data-index="{{index}}" data-id="{{item.id}}"></view>
+        </view>
       </view>
     </view>
   </view>
-</view>

@@ -1,10 +1,10 @@
   <view class='content'>
-      <view class='itm'>
+      <view class='itm' style='text-indent: 2em'>
         我是一名前端开发工程师，毕业于华农2015级制药工程。目前就职于深圳某家互联网公司，日常沉迷于敲代码无法自拔。除了
         开发公司项目，业余喜欢捣腾自己的私人项目，比如前段时间自己做的kindle搜书网站，最近做的吉他谱小程序等，希望这个小程序能为您带来便利。
         当然如果可以的话，也可以小小的支持我一下。
       </view>
-      <view class='itm'>
+      <view class='itm' style='text-align:center'>
         <image src='http://qiniu1.huzerui.com/18-3-11/96292246.jpg' mode="widthFix"></image>
       </view>
   </view>

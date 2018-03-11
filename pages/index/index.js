@@ -11,7 +11,20 @@ Page({
     duration: 1000,
     hotestList: [],
     latestList: [],
-    banner_list: []
+    banner_list: [],
+  },
+  // 若globaldata变化了，重新更改视图
+  onShow: function () {
+    let flag = wx.getStorageSync('globalChange')
+    console.log(flag)
+    if (!flag) {
+      return;
+    }
+    this.setData({
+      hotestList: app.globalData.hotestList,
+      latestList: app.globalData.latestList
+    })
+    wx.setStorageSync('globalChange', false)
   },
   //事件处理函数
   navigateToDetail: function (e) {
@@ -21,8 +34,12 @@ Page({
     })
   },
   onLoad: function () {
-    this.getGuitaData();
-    this.getBanner();
+    this.getLoveSongsByOpenId()
+      .then(() => {
+        this.getGuitaData();
+        this.getBanner();
+      })
+
   },
   getGuitaData() {
     this.setData({
@@ -51,18 +68,28 @@ Page({
     }
     API.getBanner()
       .then(res => {
-        console.log(res)
         this.setData({
           banner_list: res
         })
         app.globalData.banner_list = this.data.banner_list;
       })
   },
+  // 获取收藏歌曲列表并存在data
+  getLoveSongsByOpenId() {
+    const openId = app.globalData.openid || wx.getStorageSync('openid');
+    return API.getCollectChordsById(openId)
+      .then(res => {
+        this.setData({
+          loveSongs: res
+        })
+        wx.setStorageSync('loveSongs', res)
+      })
+  },
   loadData(page) {
     wx.showLoading({
       title: '加载中',
     });
-    const loveSongs = wx.getStorageSync('loveSongs') || [];
+    const loveSongs = this.data.loveSongs || [];
 
     const gethotestList = new Promise((resolve, reject) => {
       API.getChords(page, 6, 'view_count')
@@ -110,39 +137,104 @@ Page({
       })
 
   },
+  // 更新全局数据及标识--这里通过every跳出循环
+  updateGlobalList(songId, flag) {
+    wx.setStorageSync('globalChange', true)
+    let hotestList = app.globalData.hotestList
+    let latestList = app.globalData.latestList
+    let isNotFind = hotestList.every((obj, index) => {
+      if (obj.id == songId) {
+        let temp = obj;
+        temp.love_flag = flag
+        hotestList.splice(index, 1, temp)
+        return false
+      }else{
+        return true
+      }
+    })
+    // 若歌曲属于最热列表
+    if(!isNotFind){
+      app.globalData.hotestList = hotestList
+      return;
+    }
+    // 若歌曲属于最新列表
+    latestList.every((obj, index) => {
+      if (obj.id == songId) {
+        let temp = obj;
+        temp.love_flag = flag
+        latestList.splice(index, 1, temp)
+        return false
+      }else{
+        return true
+      }
+    })
+    app.globalData.latestList = latestList
+    
+  },
   // 收藏或取消收藏
   setSongFlag(e) {
-    let id = e.currentTarget.dataset.id;
-    let index = e.currentTarget.dataset.index;
-    let list = e.currentTarget.dataset.list;
-    let loveSongs = wx.getStorageSync('loveSongs') || [];
+    let openId = wx.getStorageSync('openid').toString()
+    let id = e.currentTarget.dataset.id
+    let index = e.currentTarget.dataset.index
+    let loveSongs = this.data.loveSongs || []
 
+    let list = e.currentTarget.dataset.list;
     let iIndex = loveSongs.indexOf(id);
     let key = `${list}[${index}].love_flag`
+    let love_flag;
+
+    wx.showLoading({
+      title: '加载中'
+    });
+
     if (iIndex == -1) {
-      loveSongs.push(id);
-      wx.setStorage({
-        key: "loveSongs",
-        data: loveSongs
-      })
-      this.setData({
-        [key]: 2
-      })
-      wx.showToast({
-        title: '收藏成功'
-      })
+      // 收藏
+      love_flag = 2
+
+      API.setCollect(openId, id, 1)
+        .then(res => {
+          API.setCollectNum(id, 1)
+            .then(() => {
+              loveSongs.unshift(id);
+              wx.setStorageSync('loveSongs', loveSongs)
+
+              this.setData({
+                [key]: love_flag
+              })
+
+              // 更新全局数据及标识
+              this.updateGlobalList(id, love_flag)
+
+              wx.showToast({
+                title: '收藏成功'
+              })
+            })
+        })
+
     } else {
-      loveSongs.splice(iIndex, 1);
-      wx.setStorage({
-        key: "loveSongs",
-        data: loveSongs
-      })
-      this.setData({
-        [key]: 1
-      })
-      wx.showToast({
-        title: '取消收藏成功'
-      })
+      // 取消收藏
+      love_flag = 1
+
+      API.setCollect(openId, id, 2)
+        .then(res => {
+          API.setCollectNum(id, 2)
+            .then(() => {
+              loveSongs.splice(iIndex, 1);
+              wx.setStorageSync('loveSongs', loveSongs)
+
+              this.setData({
+                [key]: love_flag
+              })
+
+              // 更新全局数据及标识
+              this.updateGlobalList(id, love_flag)
+
+              wx.showToast({
+                title: '取消收藏成功'
+              })
+            })
+        })
+
     }
   }
 

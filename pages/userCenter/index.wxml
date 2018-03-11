@@ -69,6 +69,19 @@
       </view>
     </view>
   </navigator>
+  <navigator url='/pages/sponsor/index'>
+    <view class='item'>
+      <view class='hd'>
+        <view class='u-tag u-tag-5'>
+          <text class='icon icon-sponsor'></text>
+        </view>
+        <text class='title'>打赏赞助</text>
+      </view>
+      <view>
+        <text class='icon icon-right'></text>
+      </view>
+    </view>
+  </navigator>
 </view>
 
 

@@ -1,25 +1,15 @@
-  <view class='title font-pri'>口袋吉他</view>
+  <!-- <view class='title font-pri'>口袋吉他</view> -->
 
   <view class='content'>
-    <view class='font-pri'>简介：</view>
+    <view class='font-pri'>小程序简介：</view>
     <view class='itm'>
       口袋吉他是个人开发的小程序，主要为随时随地想弹奏的吉他爱好者开发的搜谱工具
     </view>
     <view class='itm'>
-      如您有任何建议，欢迎在反馈中向我提出，或者直接联系我。
+      如您有任何建议，欢迎在反馈中向我提出，或者直接联系我。（一般看到会尽快回复）
     </view>
     <view class='itm'>
       <view>QQ：305418614</view>
       <view>邮箱：me@huzerui.com</view>
-    </view>
-    <view class='itm'>
-      <view>本项目目前已开源，源码存放在了github</view>
-      <view>源码地址：<a href="#">https://github.com/alex1504/wx-guita_tab</a></view>
-    </view>
-    <view class='itm'>
-      相信每一位打开这个小程序的小伙伴都有一颗热爱音乐、热爱吉他的心，原谅我们这一生不羁放纵爱自由
-    </view>
-    <view class='itm'>
-      
-    </view>
+    </view>    
   </view>

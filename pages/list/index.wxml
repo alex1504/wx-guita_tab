@@ -1,5 +1,5 @@
 <view class='m-tab'>
-  <block wx:for="{{tabs}}">
+  <block wx:for="{{tabs}}" wx:key="{{index}}">
     <view wx:if="{{index != activeTab}}" class='itm' bindtap='changeTab' data-index="{{index}}">{{item}}</view>
     <view wx:if="{{index == activeTab}}" class='itm z-active' bindtap='changeTab' data-index="{{index}}">{{item}}</view>
   </block>
@@ -9,7 +9,7 @@
 <!--  最热列表  -->
 <view wx:if="{{activeTab === 0}}">
   <view class='m-list'>
-    <view class='item flex-bx' bindtap="navigateToDetail" data-id="{{item.id}}" wx:for="{{hotList}}" wx:key="{{index}}">
+    <view class='item flex-bx' bindtap="navigateToDetail" data-id="{{item.id}}" wx:for="{{hotestList}}" wx:key="{{index}}">
       <view class='hd1'>
         <image src="{{item.song_poster}}" mode="aspectFill"></image>
       </view>
@@ -18,8 +18,8 @@
         <view class='sub'>{{item.author_name}}</view>
       </view>
       <view>
-        <view class='icon icon-love-false' wx:if="{{item.love_flag == 1}}" catch:tap='setSongFlag' data-list="hotList" data-index="{{index}}" data-id="{{item.id}}"></view>
-        <view class='icon icon-love-true' wx:if="{{item.love_flag == 2}}" catch:tap='setSongFlag' data-list="hotList" data-index="{{index}}" data-id="{{item.id}}"></view>
+        <view class='icon icon-love-false' wx:if="{{item.love_flag == 1}}" catch:tap='setSongFlag' data-list="hotestList" data-index="{{index}}" data-id="{{item.id}}"></view>
+        <view class='icon icon-love-true' wx:if="{{item.love_flag == 2}}" catch:tap='setSongFlag' data-list="hotestList" data-index="{{index}}" data-id="{{item.id}}"></view>
       </view>
     </view>
   </view>
@@ -29,7 +29,7 @@
 <!--  最新列表  -->
 <view wx:if="{{activeTab === 1}}">
  <view class='m-list'>
-    <view class='item flex-bx' bindtap="navigateToDetail" data-id="{{item.id}}" wx:for="{{newList}}" wx:key="{{index}}">
+    <view class='item flex-bx' bindtap="navigateToDetail" data-id="{{item.id}}" wx:for="{{latestList}}" wx:key="{{index}}">
       <view class='hd1'>
         <image src="{{item.song_poster}}" mode="aspectFill"></image>
       </view>
@@ -38,8 +38,8 @@
         <view class='sub'>{{item.author_name}}</view>
       </view>
       <view>
-        <view class='icon icon-love-false' wx:if="{{item.love_flag == 1}}" catch:tap='setSongFlag' data-list="newList" data-index="{{index}}" data-id="{{item.id}}"></view>
-        <view class='icon icon-love-true' wx:if="{{item.love_flag == 2}}" catch:tap='setSongFlag' data-list="newList" data-index="{{index}}" data-id="{{item.id}}"></view>
+        <view class='icon icon-love-false' wx:if="{{item.love_flag == 1}}" catch:tap='setSongFlag' data-list="latestList" data-index="{{index}}" data-id="{{item.id}}"></view>
+        <view class='icon icon-love-true' wx:if="{{item.love_flag == 2}}" catch:tap='setSongFlag' data-list="latestList" data-index="{{index}}" data-id="{{item.id}}"></view>
       </view>
     </view>
   </view>

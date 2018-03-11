@@ -29,11 +29,9 @@ App({
   globalData: {
     hotestList: null,
     latestList: null,
-    hotList: null,
-    hotListPage: 1,
+    hotestListPage: 1,
     isLoadAllHot: false,
-    newList: null,
-    newListPage: 1,
+    newtestListPage: 1,
     isLoadAllNew: false,
     banner_list: null,
   },

@@ -112,21 +112,21 @@ module.exports = {
             resolve([]);
             return;
           }
-          _this.addChords(arr,queryString)
+          _this.addChords(arr, queryString)
             .then(res => {
               resolve(res)
             }).catch(err => {
               reject(err)
             })
         },
-        fail(){
+        fail() {
           reject()
         }
       })
     })
   },
   // 添加谱子到bmob
-  addChords(chordArr,queryString) {
+  addChords(chordArr, queryString) {
     const promises = chordArr.map(obj => {
       return new Promise((resolve, reject) => {
         var Chord = Bmob.Object.extend("guita_chord_info");
@@ -159,7 +159,7 @@ module.exports = {
         })
     })
   },
-  // 收藏或取消收藏 1：收藏  2：取消收藏
+  // 统计歌曲收藏或取消收藏次数 1：收藏  2：取消收藏
   setCollectNum(id, flag) {
     return new Promise((resolve, reject) => {
       const Guita_info = Bmob.Object.extend("guita_chord_info");
@@ -177,6 +177,35 @@ module.exports = {
           reject(error);
         }
       });
+    })
+  },
+  // 收藏或取消收藏歌曲  1：收藏  2：取消收藏
+  setCollect(openid, songid, flag) {
+    return new Promise((resolve, reject) => {
+      const Guita_collect = Bmob.Object.extend("guita_collect");
+      const chord = new Guita_collect();
+      const query = new Bmob.Query(Guita_collect);
+      query.equalTo("guita_id", songid);
+      chord.set("open_id", openid);
+      chord.set("guita_id", songid);
+      if (flag == 1) {
+        chord.save(null, {
+          success: function (res) {
+            resolve(res)
+          },
+          error: function (res, err) {
+            reject(err)
+          }
+        });
+      } else if (flag == 2) {
+        query.find().then(function (chords) {
+          return Bmob.Object.destroyAll(chords);
+        }).then(function (chords) {
+          resolve(chords)
+        }, function (error) {
+          reject(error)
+        });
+      }
     })
   },
   getBanner() {
@@ -230,7 +259,7 @@ module.exports = {
           console.log(result)
           result = result.map(obj => {
             // 注意兼容new Date在ios中与chrome的差异
-            let time = new Date(obj.createdAt.replace(/\s/,'T')).getTime()
+            let time = new Date(obj.createdAt.replace(/\s/, 'T')).getTime()
             return {
               id: obj.id,
               createdAt: time,
@@ -319,6 +348,58 @@ module.exports = {
         },
         error: function (result, err) {
           reject(err)
+        }
+      });
+    })
+  },
+  /**
+   * 根据用户openId获取收藏歌曲id集合
+   * @param {string} openId 用户id
+   */
+  getCollectChordsById(openId) {
+    return new Promise((resolve, reject) => {
+      const Guita_collect = Bmob.Object.extend("guita_collect");
+      const query = new Bmob.Query(Guita_collect);
+      query.equalTo("open_id", openId);
+      query.find({
+        success: function (result) {
+          result = result.map(obj => {
+            return obj.attributes.guita_id
+            /* return {
+              id: obj.id,
+              ...obj.attributes
+            } */
+          });
+          resolve(result)
+        },
+        error: function (result, error) {
+          resolve(error)
+        }
+      });
+    })
+  },
+  /**
+   * 根据歌曲id获取收藏列表
+   * @param {array} idArr 歌曲id集合
+   */
+  getCollectChords(idArr) {
+    return new Promise((resolve, reject) => {
+      const Guita_info = Bmob.Object.extend("guita_chord_info");
+      const query = new Bmob.Query(Guita_info);
+      query.descending('updatedAt');
+      query.containedIn("objectId", idArr);
+      query.find({
+        success: function (result) {
+          result = result.map(obj => {
+            return {
+              id: obj.id,
+              ...obj.attributes
+            }
+          });
+          resolve(result)
+        },
+        error: function (error) {
+          reject(error)
         }
       });
     })

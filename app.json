@@ -9,7 +9,8 @@
     "pages/userCenter/index",
     "pages/list/index",
     "pages/feedback/index",
-    "pages/about/index"
+    "pages/about/index",
+    "pages/sponsor/index"
   ],
   "window":{
     "backgroundTextStyle":"light",

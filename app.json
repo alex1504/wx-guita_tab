@@ -14,8 +14,8 @@
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "口袋吉他",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#5F98FD",
+    "navigationBarTextStyle":"white",
+    "navigationBarTitleText": "口袋吉他"
   }
 }

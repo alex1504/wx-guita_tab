@@ -21,7 +21,7 @@
       </view>
     </view>
     <view class='m-list'>
-      <view class='item flex-bx' bindtap="navigateToDetail" data-id="{{item.id}}" wx:for="{{hotestList}}" wx:key="{{index}}">
+      <view class='item flex-bx' bindtap="navigateToDetail" data-id="{{item.id}}" wx:for="{{hotestList}}" wx:key="{{index}}" wx:if="{{index < 8}}">
         <view class='hd1'>
           <image src="{{item.song_poster}}" mode="aspectFill"></image>
         </view>
@@ -49,7 +49,7 @@
       </view>
     </view>
     <view class='m-list'>
-      <view class='item flex-bx' bindtap="navigateToDetail" data-id="{{item.id}}" wx:for="{{latestList}}" wx:key="{{index}}">
+      <view class='item flex-bx' bindtap="navigateToDetail" data-id="{{item.id}}" wx:for="{{latestList}}" wx:key="{{index}}" wx:if="{{index < 8}}">
         <view class='hd1'>
           <image src="{{item.song_poster}}" mode="aspectFill"></image>
         </view>

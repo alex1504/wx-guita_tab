@@ -7,7 +7,12 @@ Page({
   data: {
   
   },
-
+  showImage(e){
+    wx.previewImage({
+      current: e.target.dataset.src,
+      urls: [e.target.dataset.src]
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

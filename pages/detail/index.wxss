@@ -5,6 +5,7 @@ page{
 .m-detail{
   text-align: center;
   background-color: #fff;
+  margin-top: 10px;
 }
 .m-detail image{
   margin-top: 20rpx;

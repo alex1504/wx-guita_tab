@@ -1,5 +1,6 @@
 page{
   background-color: #fff;
+  padding: 10px 0;
 }
 .font-grey{
   color: #8f8f8f;

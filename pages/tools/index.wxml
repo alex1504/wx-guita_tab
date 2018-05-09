@@ -1,37 +1,41 @@
 <!-- 和弦图  -->
 <view class='g-main'>
-  <view class='m-chord-image'>
-    <block wx:if="{{chordImages[selectSoundName][selectType]}}">
-      <image src="{{chordImages[selectSoundName][selectType]}}" mode='aspectFit'></image>
-    </block>
-  </view>
+    <view class='m-chord-image'>
+        <block wx:if="{{chordImages[selectSoundName][selectType]}}">
+            <image src="{{chordImages[selectSoundName][selectType]}}" mode='aspectFit'></image>
+        </block>
+    </view>
 
-  <view class='flex-bx title-bx'>
-    <text class='flex-itm'>音名</text>
-    <text class='flex-itm'>和弦类型</text>
-  </view>
-  <view class='flex-bx content-bx'>
-    <view class='flex-itm sound-name'>
-      <block wx:for="{{soundNameList}}">
-        <view wx:if="{{index != selectSoundName}}" class='item' wx:key="{{index}}" bindtap='changeSoundName' data-index="{{index}}">
-          {{item}}
-        </view>
-        <view wx:if="{{index == selectSoundName}}" class='item active' wx:key="{{index}}" bindtap='changeSoundName' data-index="{{index}}">
-          <view class='bd'>{{item}}</view>
-          <view class='icon icon-choose'></view>
-        </view>
-      </block>
+    <view class='flex-bx title-bx'>
+        <text class='flex-itm'>音名</text>
+        <text class='flex-itm'>和弦类型</text>
     </view>
-    <view class='flex-itm sound-type'>
-      <block wx:for="{{typeList}}">
-        <view wx:if="{{index != selectType}}" class='item' wx:key="{{index}}" bindtap='changeType' data-index="{{index}}">
-          {{item}}
+    <view class='flex-bx content-bx'>
+        <view class='flex-itm sound-name'>
+            <block wx:for="{{soundNameList}}">
+                <view wx:if="{{index != selectSoundName}}" class='item' wx:key="{{index}}" bindtap='changeSoundName'
+                      data-index="{{index}}">
+                    {{item}}
+                </view>
+                <view wx:if="{{index == selectSoundName}}" class='item active' wx:key="{{index}}"
+                      bindtap='changeSoundName' data-index="{{index}}">
+                    <view class='bd'>{{item}}</view>
+                    <view class='icon icon-choose'></view>
+                </view>
+            </block>
         </view>
-        <view wx:if="{{index == selectType}}" class='item active' wx:key="{{index}}" bindtap='changeType' data-index="{{index}}">
-          <view class='bd'>{{item}}</view>
-          <view class='icon icon-choose'></view>
+        <view class='flex-itm sound-type'>
+            <block wx:for="{{typeList}}">
+                <view wx:if="{{index != selectType}}" class='item' wx:key="{{index}}" bindtap='changeType'
+                      data-index="{{index}}">
+                    {{item}}
+                </view>
+                <view wx:if="{{index == selectType}}" class='item active' wx:key="{{index}}" bindtap='changeType'
+                      data-index="{{index}}">
+                    <view class='bd'>{{item}}</view>
+                    <view class='icon icon-choose'></view>
+                </view>
+            </block>
         </view>
-      </block>
     </view>
-  </view>
 </view>

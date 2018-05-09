@@ -1,26 +1,29 @@
 <!--  喜爱列表  -->
 <view class='g-main'>
-  <view class='m-list'>
-    <view class='item' wx:for="{{guita_list}}" wx:key="{{index}}" bindtap='showDetail' data-id="{{item.id}}" wx:if="{{item.love_flag == 2}}">
-      <view class='item-hd'>
-        <image src='{{item.song_poster}}' mode="aspectFill"></image>
-      </view>
-      <view class='item-bd'>
-        <view class='content'>
-          <view>{{item.song_name}}</view>
-          <view>{{item.author_name}}</view>
+    <view class='m-list'>
+        <view class='item' wx:for="{{guita_list}}" wx:key="{{index}}" bindtap='showDetail' data-id="{{item.id}}"
+              wx:if="{{item.love_flag == 2}}">
+            <view class='item-hd'>
+                <image src='{{item.song_poster}}' mode="aspectFill"></image>
+            </view>
+            <view class='item-bd'>
+                <view class='content'>
+                    <view>{{item.song_name}}</view>
+                    <view>{{item.author_name}}</view>
+                </view>
+                <view class='icon-bx'>
+                    <view class='icon icon-love-false' wx:if="{{item.love_flag == 1}}" catch:tap='setSongFlag'
+                          data-index="{{index}}" data-id="{{item.id}}"></view>
+                    <view class='icon icon-love-true' wx:if="{{item.love_flag == 2}}" catch:tap='setSongFlag'
+                          data-index="{{index}}" data-id="{{item.id}}"></view>
+                </view>
+            </view>
         </view>
-        <view class='icon-bx'>
-          <view class='icon icon-love-false' wx:if="{{item.love_flag == 1}}" catch:tap='setSongFlag' data-index="{{index}}" data-id="{{item.id}}"></view>
-          <view class='icon icon-love-true' wx:if="{{item.love_flag == 2}}" catch:tap='setSongFlag' data-index="{{index}}" data-id="{{item.id}}"></view>
-        </view>
-      </view>
-    </view>
 
-    <view class='tip' wx:if="{{isTipShow}}">
-      <view class='icon icon-sad'></view>
-      <view>收藏夹是空的，赶快去收藏吧.!</view>
+        <view class='tip' wx:if="{{isTipShow}}">
+            <view class='icon icon-sad'></view>
+            <view>收藏夹是空的，赶快去收藏吧.!</view>
+        </view>
     </view>
-  </view>
 
 </view>

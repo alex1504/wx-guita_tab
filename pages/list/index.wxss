@@ -29,7 +29,7 @@ page{
   left: 0;
   width: 50%;
   bottom: 0;  
-  background-color: #e61b40;
+  background-color: #5F98FD;
   transform: translateX(0)
 }
 

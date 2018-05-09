@@ -1,93 +1,103 @@
 <scroll-view style="height: 100%;" scroll-y="true" scroll-top="{{scrollTop}}" bindscroll="scrollTopFun">
-  <view class="g-mn">
-    <view class="form">
+    <view class="g-mn">
+        <view class="form">
       <textarea value="{{inputText}}" bindinput='bindInput' focus="{{isFocus}}">
         <view class='input-tip'>{{inputTip}}</view>
       </textarea>
-      <view class="u-btn u-btn-launch" bindtap='launchComment'>发表</view>
-      <view class="u-btn u-btn-cancle" bindtap='cancleReplyTo' wx:if="{{to}}">评论曲谱</view>
-    </view>
-
-    <view class='tip' wx:if="{{!allList.length}}">曲谱暂无评论，赶紧发表吧，沙发稳稳的！</view>
-
-    <!-- 热门评论  -->
-    <view class='c-list' wx:if="{{hotList.length}}">
-      <view class='title title-hot'>热门评论</view>
-      <view class='itm' wx:for="{{hotList}}" wx:key="{{index}}">
-        <image src="{{item.fromAvatar}}" alt=""></image>
-        <view>
-          <view class='flex-bx'>
-            <view class='font-grey'>{{item.from}}</view>
-            <view bindtap='toggleGoodComment' data-id="{{item.id}}">
-              <block wx:if="{{!item.isStar}}">
-                <view class='icon icon-good'></view>{{item.star}}
-              </block>
-              <block wx:if="{{item.isStar}}">
-                <view class='icon icon-good-true'></view>{{item.star}}
-              </block>
-            </view>
-          </view>
-          <view class='flex-bx'>
-            <view class='date-wrap font-grey'>{{item.createdAtRecent}}</view>
-            <view class='reply-wrap'bindtap='replyComment' data-id="{{item.id}}" data-from="{{item.from}}" data-fromAvatar="{{item.fromAvatar}}" data-content="{{item.content}}">
-              <view class='icon icon-reply'></view>
-            </view>
-          </view>
-          <!-- 回复他人的评论  -->
-          <view class='comment' wx:if="{{item.to}}">
-            <view>
-              <text class='font-grey'>回复{{item.to}}：</text> {{item.content}}</view>
-            <view class='reply-to'>{{item.to}}：{{item.toContent}}</view>
-          </view>
-          <!-- 不是回复他人的评论  -->
-          <view class='comment' class='flex-bx' wx:if="{{!item.to}}">
-            <view>{{item.content}}</view>
-          </view>
+            <view class="u-btn u-btn-launch" bindtap='launchComment'>发表</view>
+            <view class="u-btn u-btn-cancle" bindtap='cancleReplyTo' wx:if="{{to}}">评论曲谱</view>
         </view>
-      </view>
-    </view>
 
+        <view class='tip' wx:if="{{!allList.length}}">曲谱暂无评论，赶紧发表吧，沙发稳稳的！</view>
 
-    <!-- 全部评论  -->
-    <view class='c-list' wx:if="{{allList.length}}">
-      <view class='title'>全部评论</view>
-      <view class='itm' wx:for="{{allList}}" wx:key="{{index}}">
-        <image src="{{item.fromAvatar}}" alt=""></image>
-        <view>
-          <view class='flex-bx'>
-            <view class='font-grey'>{{item.from}}</view>
-            <view bindtap='toggleGoodComment' data-id="{{item.id}}">
-              <block wx:if="{{!item.isStar}}">
-                <view class='icon icon-good'></view>{{item.star}}
-              </block>
-              <block wx:if="{{item.isStar}}">
-                <view class='icon icon-good-true'></view>{{item.star}}
-              </block>
+        <!-- 热门评论  -->
+        <view class='c-list' wx:if="{{hotList.length}}">
+            <view class='title title-hot'>热门评论</view>
+            <view class='itm' wx:for="{{hotList}}" wx:key="{{index}}">
+                <image src="{{item.fromAvatar}}" alt=""></image>
+                <view>
+                    <view class='flex-bx'>
+                        <view class='font-grey'>{{item.from}}</view>
+                        <view bindtap='toggleGoodComment' data-id="{{item.id}}">
+                            <block wx:if="{{!item.isStar}}">
+                                <view class='icon icon-good'></view>
+                                {{item.star}}
+                            </block>
+                            <block wx:if="{{item.isStar}}">
+                                <view class='icon icon-good-true'></view>
+                                {{item.star}}
+                            </block>
+                        </view>
+                    </view>
+                    <view class='flex-bx'>
+                        <view class='date-wrap font-grey'>{{item.createdAtRecent}}</view>
+                        <view class='reply-wrap' bindtap='replyComment' data-id="{{item.id}}" data-from="{{item.from}}"
+                              data-fromAvatar="{{item.fromAvatar}}" data-content="{{item.content}}">
+                            <view class='icon icon-reply'></view>
+                        </view>
+                    </view>
+                    <!-- 回复他人的评论  -->
+                    <view class='comment' wx:if="{{item.to}}">
+                        <view>
+                            <text class='font-grey'>回复{{item.to}}：</text>
+                            {{item.content}}
+                        </view>
+                        <view class='reply-to'>{{item.to}}：{{item.toContent}}</view>
+                    </view>
+                    <!-- 不是回复他人的评论  -->
+                    <view class='comment' class='flex-bx' wx:if="{{!item.to}}">
+                        <view>{{item.content}}</view>
+                    </view>
+                </view>
             </view>
-          </view>
-          <view class='flex-bx'>
-            <view class='date-wrap font-grey'>{{item.createdAtRecent}}</view>
-            <view class='reply-wrap' bindtap='replyComment' data-id="{{item.id}}" data-from="{{item.from}}" data-fromAvatar="{{item.fromAvatar}}" data-content="{{item.content}}">
-              <view class='icon icon-reply'></view>
-            </view>
-          </view>
-          <!-- 回复他人的评论  -->
-          <view class='comment' wx:if="{{item.to}}">
-            <view>
-              <text class='font-grey'>回复{{item.to}}：</text> {{item.content}}</view>
-            <view class='reply-to'>{{item.to}}：{{item.toContent}}</view>
-          </view>
-          <!-- 不是回复他人的评论  -->
-          <view class='comment' class='flex-bx' wx:if="{{!item.to}}">
-            <view>{{item.content}}</view>
-          </view>
         </view>
-      </view>
+
+
+        <!-- 全部评论  -->
+        <view class='c-list' wx:if="{{allList.length}}">
+            <view class='title'>全部评论</view>
+            <view class='itm' wx:for="{{allList}}" wx:key="{{index}}">
+                <image src="{{item.fromAvatar}}" alt=""></image>
+                <view>
+                    <view class='flex-bx'>
+                        <view class='font-grey'>{{item.from}}</view>
+                        <view bindtap='toggleGoodComment' data-id="{{item.id}}">
+                            <block wx:if="{{!item.isStar}}">
+                                <view class='icon icon-good'></view>
+                                {{item.star}}
+                            </block>
+                            <block wx:if="{{item.isStar}}">
+                                <view class='icon icon-good-true'></view>
+                                {{item.star}}
+                            </block>
+                        </view>
+                    </view>
+                    <view class='flex-bx'>
+                        <view class='date-wrap font-grey'>{{item.createdAtRecent}}</view>
+                        <view class='reply-wrap' bindtap='replyComment' data-id="{{item.id}}" data-from="{{item.from}}"
+                              data-fromAvatar="{{item.fromAvatar}}" data-content="{{item.content}}">
+                            <view class='icon icon-reply'></view>
+                        </view>
+                    </view>
+                    <!-- 回复他人的评论  -->
+                    <view class='comment' wx:if="{{item.to}}">
+                        <view>
+                            <text class='font-grey'>回复{{item.to}}：</text>
+                            {{item.content}}
+                        </view>
+                        <view class='reply-to'>{{item.to}}：{{item.toContent}}</view>
+                    </view>
+                    <!-- 不是回复他人的评论  -->
+                    <view class='comment' class='flex-bx' wx:if="{{!item.to}}">
+                        <view>{{item.content}}</view>
+                    </view>
+                </view>
+            </view>
+
+
+        </view>
 
 
     </view>
-
-
-  </view>
 
 </scroll-view>

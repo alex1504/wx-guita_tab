@@ -10,13 +10,13 @@ function showTip(sms, icon, fun, t) {
     })
 }
 
-function showModal(c,t,fun) {
-    if(!t)
-        t='提示'
+function showModal(c, t, fun) {
+    if (!t)
+        t = '提示'
     wx.showModal({
         title: t,
         content: c,
-        showCancel:false,
+        showCancel: false,
         success: fun
     })
 }

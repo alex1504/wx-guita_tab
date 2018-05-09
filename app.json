@@ -1,5 +1,5 @@
 {
-  "pages":[
+  "pages": [
     "pages/index/index",
     "pages/search/index",
     "pages/tools/index",
@@ -12,10 +12,10 @@
     "pages/about/index",
     "pages/sponsor/index"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#5F98FD",
-    "navigationBarTextStyle":"white",
+    "navigationBarTextStyle": "white",
     "navigationBarTitleText": "口袋吉他"
   }
 }

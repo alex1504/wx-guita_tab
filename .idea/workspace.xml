@@ -3,35 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9e0b1fc9-d0ac-4fb3-8897-9dd7225e3009" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/app.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/about/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/about/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/about/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/collect/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/collect/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/collect/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/collect/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/comment/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/comment/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/comment/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/comment/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/detail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/detail/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/detail/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/detail/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/feedback/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/feedback/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/feedback/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/feedback/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/list/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/list/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/list/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/list/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/list/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/list/index.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/search/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/search/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/search/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sponsor/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sponsor/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sponsor/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sponsor/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/tools/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/tools/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/tools/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/tools/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/userCenter/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userCenter/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/userCenter/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/userCenter/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/common.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/common.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/util.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -99,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pages/search/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="178" column="19" selection-start-line="178" selection-start-column="19" selection-end-line="178" selection-end-column="19" />
+            <state relative-caret-position="286">
+              <caret line="167" column="29" selection-start-line="167" selection-start-column="29" selection-end-line="167" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -126,11 +97,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/api/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="79" column="23" lean-forward="true" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
+            <state relative-caret-position="307">
+              <caret line="217" column="39" selection-start-line="217" selection-start-column="39" selection-end-line="217" selection-end-column="39" />
               <folding>
                 <element signature="e#0#33#0" expanded="true" />
               </folding>
@@ -143,6 +114,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>scratchChords</find>
+      <find>banner</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -175,12 +147,12 @@
         <option value="$PROJECT_DIR$/pages/sponsor/index.wxml" />
         <option value="$PROJECT_DIR$/pages/tools/index.wxml" />
         <option value="$PROJECT_DIR$/pages/userCenter/index.wxml" />
-        <option value="$PROJECT_DIR$/api/index.js" />
         <option value="$PROJECT_DIR$/pages/search/index.wxml" />
         <option value="$PROJECT_DIR$/pages/index/index.wxss" />
         <option value="$PROJECT_DIR$/pages/list/index.js" />
         <option value="$PROJECT_DIR$/pages/list/index.wxss" />
         <option value="$PROJECT_DIR$/pages/search/index.js" />
+        <option value="$PROJECT_DIR$/api/index.js" />
       </list>
     </option>
   </component>
@@ -211,6 +183,11 @@
             <path>
               <item name="wx-guita_tab" type="b2602c69:ProjectViewProjectNode" />
               <item name="wx-guita_tab" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wx-guita_tab" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wx-guita_tab" type="462c0819:PsiDirectoryNode" />
+              <item name="api" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="wx-guita_tab" type="b2602c69:ProjectViewProjectNode" />
@@ -267,12 +244,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1525866406831</updated>
-      <workItem from="1525866408143" duration="1856000" />
+      <workItem from="1525866408143" duration="2344000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1856000" />
+    <option name="totallyTimeSpent" value="2344000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -285,7 +262,7 @@
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32972974" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
@@ -486,34 +463,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="79" column="23" lean-forward="true" selection-start-line="79" selection-start-column="23" selection-end-line="79" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pages/list/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
           <caret line="59" column="18" lean-forward="true" selection-start-line="59" selection-start-column="18" selection-end-line="59" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/list/index.wxss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages/userCenter/index.wxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -547,8 +500,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/search/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="178" column="19" selection-start-line="178" selection-start-column="19" selection-end-line="178" selection-end-column="19" />
+        <state relative-caret-position="286">
+          <caret line="167" column="29" selection-start-line="167" selection-start-column="29" selection-end-line="167" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/list/index.wxss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="468">
+          <caret line="28" column="10" lean-forward="true" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages/userCenter/index.wxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="49" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="217" column="39" selection-start-line="217" selection-start-column="39" selection-end-line="217" selection-end-column="39" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -215,6 +215,7 @@ module.exports = {
         return new Promise((resolve, reject) => {
             let Banner = Bmob.Object.extend("banner");
             let query = new Bmob.Query(Banner);
+            query.descending('updatedAt');
             query.find({
                 success: function (result) {
                     result = result.map(obj => {

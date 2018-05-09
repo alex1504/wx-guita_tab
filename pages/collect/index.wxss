@@ -3,19 +3,19 @@ page {
 }
 
 .m-list {
-    padding: 20 rpx;
+    padding: 20rpx;
 }
 
 .m-list .item {
     display: flex;
     align-items: flex-start;
-    height: 120 rpx;
+    height: 120rpx;
     border-bottom: 1px solid #f3f3f3;
     padding-bottom: 10px;
 }
 
 .m-list .item:nth-child(n+1) {
-    margin-top: 20 rpx;
+    margin-top: 20rpx;
 }
 
 .m-list .item image {
@@ -24,9 +24,9 @@ page {
 }
 
 .m-list .item-hd {
-    flex-basis: 120 rpx;
+    flex-basis: 120rpx;
     height: 100%;
-    margin-right: 20 rpx;
+    margin-right: 20rpx;
 }
 
 .m-list .item-bd {
@@ -41,7 +41,7 @@ page {
 }
 
 .m-list .item-bd .icon-bx {
-    flex-basis: 80 rpx;
+    flex-basis: 80rpx;
 }
 
 .m-list .tip {
@@ -52,11 +52,11 @@ page {
 /*  热门搜索  */
 
 .m-hot {
-    padding: 20 rpx;
+    padding: 20rpx;
 }
 
 .m-hot .title {
-    font-size: 30 rpx;
+    font-size: 30rpx;
     position: relative;
     padding-left: 10px;
 }
@@ -82,10 +82,10 @@ page {
 
 .m-hot .tag {
     border: 1px solid #b2d2f5;
-    padding: 12 rpx 30 rpx;
+    padding: 12rpx 30rpx;
 }
 
 .m-hot .tag {
-    margin-top: 20 rpx;
-    margin-right: 10 rpx;
+    margin-top: 20rpx;
+    margin-right: 10rpx;
 }

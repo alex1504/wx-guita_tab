@@ -118,7 +118,7 @@ page {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 200 rpx 0;
+    padding: 200rpx 0;
     box-sizing: border-box;
 }
 
@@ -127,7 +127,7 @@ image {
 }
 
 .g-main {
-    padding-bottom: 88 rpx;
+    padding-bottom: 88rpx;
 }
 
 /* nav */
@@ -135,7 +135,7 @@ image {
     position: fixed;
     background-color: #fff;
     width: 100%;
-    height: 100 rpx;
+    height: 100rpx;
     bottom: 0;
     left: 0;
     display: flex;
@@ -146,7 +146,7 @@ image {
 }
 
 .m-nav .icon {
-    font-size: 46 rpx;
+    font-size: 46rpx;
 }
 
 .m-nav > view {
@@ -155,7 +155,7 @@ image {
 }
 
 .m-nav > view navigator {
-    padding: 10 rpx 0;
+    padding: 10rpx 0;
 }
 
 .m-nav > view.z-active navigator {

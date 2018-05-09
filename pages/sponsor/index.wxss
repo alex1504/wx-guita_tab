@@ -3,8 +3,8 @@
 }
 
 .title {
-    height: 88 rpx;
-    line-height: 88 rpx;
+    height: 88rpx;
+    line-height: 88rpx;
     background-color: #fff;
     padding: 0 10px;
 }

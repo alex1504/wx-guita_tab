@@ -8,15 +8,15 @@ page {
     width: 100%;
     left: 0;
     top: 0;
-    height: 88 rpx;
-    line-height: 88 rpx;
+    height: 88rpx;
+    line-height: 88rpx;
     background-color: #fff;
 }
 
 .m-tab {
     display: flex;
-    height: 88 rpx;
-    line-height: 88 rpx;
+    height: 88rpx;
+    line-height: 88rpx;
     background-color: #fff;
     text-align: center;
     position: relative;
@@ -29,7 +29,7 @@ page {
 
 .m-tab .slider {
     position: absolute;
-    height: 6 rpx;
+    height: 6rpx;
     left: 0;
     width: 50%;
     bottom: 0;
@@ -52,7 +52,7 @@ page {
 }
 
 .m-list {
-    padding: 20 rpx;
+    padding: 20rpx;
     display: flex;
     flex-wrap: wrap;
 }
@@ -85,7 +85,7 @@ page {
 }
 
 .m-list .item .content {
-    padding: 24 rpx;
+    padding: 24rpx;
 }
 
 .sub {
@@ -93,6 +93,6 @@ page {
 }
 
 .m-list .item image {
-    width: 120 rpx;
-    height: 120 rpx;
+    width: 120rpx;
+    height: 120rpx;
 }

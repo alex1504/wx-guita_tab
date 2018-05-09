@@ -36,7 +36,7 @@ textarea {
     background-color: #f3f2f1;
     color: #888;
     width: 100%;
-    height: 160 rpx;
+    height: 160rpx;
     box-sizing: border-box;
     padding: 4px 10px;
 }
@@ -99,8 +99,8 @@ textarea {
 }
 
 .c-list .itm image {
-    width: 60 rpx;
-    height: 60 rpx;
+    width: 60rpx;
+    height: 60rpx;
     border-radius: 50%;
     overflow: hidden;
     margin-right: 10px;
@@ -147,8 +147,8 @@ textarea {
 }
 
 .c-list .reply-wrap {
-    width: 60 rpx;
-    height: 60 rpx;
+    width: 60rpx;
+    height: 60rpx;
     display: flex;
     justify-content: center;
     align-items: center;

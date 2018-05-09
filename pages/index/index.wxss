@@ -1,6 +1,6 @@
 /**index.wxss**/
 swiper {
-    height: 380 rpx;
+    height: 380rpx;
 }
 
 swiper-item {
@@ -15,7 +15,7 @@ swiper image {
 
 /* title  */
 .m-title {
-    padding: 20 rpx;
+    padding: 20rpx;
     background-color: #fff;
 }
 
@@ -39,7 +39,7 @@ swiper image {
 
 .m-list {
     background-color: #fff;
-    padding: 20 rpx 20 rpx 90 rpx;
+    padding: 20rpx 20rpx 90rpx;
     display: flex;
     flex-wrap: wrap;
 }
@@ -72,7 +72,7 @@ swiper image {
 }
 
 .m-list .item .content {
-    padding: 24 rpx;
+    padding: 24rpx;
 }
 
 .sub {
@@ -80,6 +80,6 @@ swiper image {
 }
 
 .m-list .item image {
-    width: 120 rpx;
-    height: 120 rpx;
+    width: 120rpx;
+    height: 120rpx;
 }

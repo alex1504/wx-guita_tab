@@ -5,8 +5,8 @@
 }
 
 .m-fb .input {
-    height: 70 rpx;
-    line-height: 70 rpx;
+    height: 70rpx;
+    line-height: 70rpx;
     border-bottom: 1px solid #eee;
 }
 
@@ -16,7 +16,7 @@
 }
 
 .m-fb .textarea {
-    height: 300 rpx;
+    height: 300rpx;
 }
 
 .m-fb .textarea textarea {
@@ -24,14 +24,14 @@
 }
 
 .btn-wrap {
-    margin-top: 60 rpx;
+    margin-top: 60rpx;
     text-align: center;
 }
 
 .u-btn {
-    width: 600 rpx;
-    height: 100 rpx;
-    line-height: 100 rpx;
+    width: 600rpx;
+    height: 100rpx;
+    line-height: 100rpx;
     display: inline-block;
     background-color: #5F98FD;
     color: #fff;

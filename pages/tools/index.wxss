@@ -3,11 +3,11 @@ page {
 }
 
 .m-tool {
-    padding: 20 rpx;
+    padding: 20rpx;
 }
 
 .m-tool image {
-    margin-top: 10 rpx;
+    margin-top: 10rpx;
     width: 100%;
 }
 

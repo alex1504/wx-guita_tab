@@ -1,48 +1,58 @@
-page{
-  background-color: #fff;
+page {
+    background-color: #fff;
 }
+
 /*  吉他谱详情  */
-.m-detail{
-  text-align: center;
-  background-color: #fff;
-  margin-top: 10px;
+.m-detail {
+    text-align: center;
+    background-color: #fff;
+    margin-top: 10px;
 }
-.m-detail image{
-  margin-top: 20rpx;
-  width: 100%;
+
+.m-detail image {
+    margin-top: 20 rpx;
+    width: 100%;
 }
-.m-detail audio{
-  margin-top: 40rpx;
+
+.m-detail audio {
+    margin-top: 40 rpx;
 }
-.m-detail .title{
-  position: relative;
-  font-size: 18px;
+
+.m-detail .title {
+    position: relative;
+    font-size: 18px;
 }
-.m-detail .title .icon-comment{
-  position: absolute;
-  left: 60rpx;
-  top: 0;
+
+.m-detail .title .icon-comment {
+    position: absolute;
+    left: 60 rpx;
+    top: 0;
 }
-.m-detail .title .icon-love-true,.m-detail .title .icon-love-false{
-  position: absolute;
-  right: 60rpx;
-  top: 0;
+
+.m-detail .title .icon-love-true, .m-detail .title .icon-love-false {
+    position: absolute;
+    right: 60 rpx;
+    top: 0;
 }
-.m-count{
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 30rpx;
+
+.m-count {
+    display: flex;
+    justify-content: flex-start;
+    margin-top: 30 rpx;
 }
-.m-count .before{
-  flex: 1;
-  text-align: left;
-  padding-left: 60rpx;
+
+.m-count .before {
+    flex: 1;
+    text-align: left;
+    padding-left: 60 rpx;
 }
-.m-count .after{
-  flex: 1;
-  text-align: right;
-  padding-right: 60rpx;
+
+.m-count .after {
+    flex: 1;
+    text-align: right;
+    padding-right: 60 rpx;
 }
-.m-count .icon{
-  margin-right: 10rpx;
+
+.m-count .icon {
+    margin-right: 10 rpx;
 }

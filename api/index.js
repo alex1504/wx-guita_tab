@@ -67,11 +67,13 @@ module.exports = {
             //authorQuery.contains("author_name", queryString);
             authorQuery.equalTo("author_name", queryString);
 
-            const mainQuery = Bmob.Query.or(songQuery, authorQuery);
+            const queryStringQuery = new Bmob.Query(Guita_info);
+            queryStringQuery.equalTo("query", queryString);
+
+            const mainQuery = Bmob.Query.or(songQuery, authorQuery, queryStringQuery);
             mainQuery.find({
                 success: function (result) {
                     console.log(result)
-                    console.log('---------')
                     result = result.map(obj => {
                         return {
                             id: obj.id,

@@ -1,135 +1,136 @@
 page {
-  background-color: #fff;
+    background-color: #fff;
 }
 
 .sub {
-  color: #888;
+    color: #888;
 }
 
 /*  搜索条  */
 
 .m-search {
-  background-color: rgba(196, 221, 250, 0.4);
-  padding: 20rpx;
-  display: flex;
-  align-items: center;
+    background-color: rgba(196, 221, 250, 0.4);
+    padding: 20 rpx;
+    display: flex;
+    align-items: center;
 }
 
 .m-search input {
-  display: inline-block;
-  box-sizing: border-box;
-  padding-left: 20rpx;
-  height: 1.8rem;
-  width: 100%;
+    display: inline-block;
+    box-sizing: border-box;
+    padding-left: 20 rpx;
+    height: 1.8rem;
+    width: 100%;
 }
 
 .m-search .flex-input {
-  display: flex;
-  align-items: center;
-  flex: 1;
-  background-color: #fff;
-  padding-left: 20rpx;
+    display: flex;
+    align-items: center;
+    flex: 1;
+    background-color: #fff;
+    padding-left: 20 rpx;
 }
 
 .m-search .flex-btn {
-  background-color: #b2d2f5;
-  height: 1.8rem;
-  line-height: 1.8rem;
-  width: 140rpx;
-  text-align: center;
-  color: #fefefe;
+    background-color: #b2d2f5;
+    height: 1.8rem;
+    line-height: 1.8rem;
+    width: 140 rpx;
+    text-align: center;
+    color: #fefefe;
 }
 
 .m-search .icon-search {
-  color: rgba(196, 221, 250, 1);
+    color: rgba(196, 221, 250, 1);
 }
 
 /*  搜索列表  */
 
 .m-list {
-  padding: 20rpx;
+    padding: 20 rpx;
 }
 
 .m-list .item {
-  display: flex;
-  align-items: flex-start;
-  height: 120rpx;
-  border-bottom: 1px solid #f3f3f3;
-  padding-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    height: 120 rpx;
+    border-bottom: 1px solid #f3f3f3;
+    padding-bottom: 10px;
 }
 
 .m-list .item:nth-child(n+1) {
-  margin-top: 20rpx;
+    margin-top: 20 rpx;
 }
 
 .m-list .item image {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .m-list .item-hd {
-  flex-basis: 120rpx;
-  height: 100%;
-  margin-right: 20rpx;
+    flex-basis: 120 rpx;
+    height: 100%;
+    margin-right: 20 rpx;
 }
 
 .m-list .item-bd {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  flex: 1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex: 1;
 }
 
 .m-list .item-bd .content {
-  flex: 1;
+    flex: 1;
 }
 
 .m-list .item-bd .icon-bx {
-  flex-basis: 80rpx;
+    flex-basis: 80 rpx;
 }
 
 .m-list .tip {
-  color: #cad3d7;
-  text-align: center;
+    color: #cad3d7;
+    text-align: center;
 }
 
 /*  热门搜索  */
 
 .m-hot {
-  padding: 20rpx;
+    padding: 20 rpx;
 }
 
 .m-hot .title {
-  font-size: 30rpx;
-  position: relative;
-  padding-left: 10px;
+    font-size: 30 rpx;
+    position: relative;
+    padding-left: 10px;
 }
 
 .m-hot .title::before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: "";
-  display: block;
-  width: 4px;
-  height: 100%;
-  background-color: #b2d2f5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    display: block;
+    width: 4px;
+    height: 100%;
+    background-color: #b2d2f5;
 }
 
 .m-hot .tag-wrap {
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .m-hot .tag {
-  border: 1px solid #b2d2f5;
-  padding: 12rpx 30rpx;
-}
+    border: 1px solid #b2d2f5;
+    padding: 12 rpx 30 rpx;
+    margin-top: 20 rpx;
+    margin-right: 10 rpx;
+    flex: 1;
+    min-width: 120 rpx;
+    text-align: center;
 
-.m-hot .tag {
-  margin-top: 20rpx;
-  margin-right: 10rpx;
 }

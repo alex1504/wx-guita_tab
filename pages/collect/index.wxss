@@ -1,90 +1,91 @@
-page{
-  background-color: #fff;
+page {
+    background-color: #fff;
 }
+
 .m-list {
-  padding: 20rpx;
+    padding: 20 rpx;
 }
 
 .m-list .item {
-  display: flex;
-  align-items: flex-start;
-  height: 120rpx;
-  border-bottom: 1px solid #f3f3f3;
-  padding-bottom: 10px;
+    display: flex;
+    align-items: flex-start;
+    height: 120 rpx;
+    border-bottom: 1px solid #f3f3f3;
+    padding-bottom: 10px;
 }
 
 .m-list .item:nth-child(n+1) {
-  margin-top: 20rpx;
+    margin-top: 20 rpx;
 }
 
 .m-list .item image {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .m-list .item-hd {
-  flex-basis: 120rpx;
-  height: 100%;
-  margin-right: 20rpx;
+    flex-basis: 120 rpx;
+    height: 100%;
+    margin-right: 20 rpx;
 }
 
 .m-list .item-bd {
-  display: flex;
-  align-items: center;
-  height: 100%;
-  flex: 1;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    flex: 1;
 }
 
 .m-list .item-bd .content {
-  flex: 1;
+    flex: 1;
 }
 
 .m-list .item-bd .icon-bx {
-  flex-basis: 80rpx;
+    flex-basis: 80 rpx;
 }
 
 .m-list .tip {
-  color: #cad3d7;
-  text-align: center;
+    color: #cad3d7;
+    text-align: center;
 }
 
 /*  热门搜索  */
 
 .m-hot {
-  padding: 20rpx;
+    padding: 20 rpx;
 }
 
 .m-hot .title {
-  font-size: 30rpx;
-  position: relative;
-  padding-left: 10px;
+    font-size: 30 rpx;
+    position: relative;
+    padding-left: 10px;
 }
 
 .m-hot .title::before {
-  position: absolute;
-  left: 0;
-  top: 0;
-  content: "";
-  display: block;
-  width: 4px;
-  height: 100%;
-  background-color: #b2d2f5;
+    position: absolute;
+    left: 0;
+    top: 0;
+    content: "";
+    display: block;
+    width: 4px;
+    height: 100%;
+    background-color: #b2d2f5;
 }
 
 .m-hot .tag-wrap {
-  margin-top: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  flex-wrap: wrap;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .m-hot .tag {
-  border: 1px solid #b2d2f5;
-  padding: 12rpx 30rpx;
+    border: 1px solid #b2d2f5;
+    padding: 12 rpx 30 rpx;
 }
 
 .m-hot .tag {
-  margin-top: 20rpx;
-  margin-right: 10rpx;
+    margin-top: 20 rpx;
+    margin-right: 10 rpx;
 }

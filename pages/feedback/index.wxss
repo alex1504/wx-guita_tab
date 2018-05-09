@@ -1,34 +1,39 @@
-.m-fb{
-  background-color: #fff;
-  border-top: 1px solid #eee;
-  border-bottom: 1px solid #eee;
-}
-.m-fb .input{
-  height: 70rpx;
-  line-height: 70rpx;
-  border-bottom: 1px solid #eee;
-}
-.m-fb .input input{
-  padding: 0 10px;
-  height: 100%;
-}
-.m-fb .textarea{
-  height: 300rpx;
-}
-.m-fb .textarea textarea{
-  padding: 10px;
+.m-fb {
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
 }
 
-.btn-wrap{
-  margin-top: 60rpx;
-  text-align: center;
+.m-fb .input {
+    height: 70 rpx;
+    line-height: 70 rpx;
+    border-bottom: 1px solid #eee;
 }
-.u-btn{
-  width: 600rpx;
-  height: 100rpx;
-  line-height: 100rpx;
-  display: inline-block;
-  background-color: #5F98FD;
-  color: #fff;
-  margin: 0 auto;
+
+.m-fb .input input {
+    padding: 0 10px;
+    height: 100%;
+}
+
+.m-fb .textarea {
+    height: 300 rpx;
+}
+
+.m-fb .textarea textarea {
+    padding: 10px;
+}
+
+.btn-wrap {
+    margin-top: 60 rpx;
+    text-align: center;
+}
+
+.u-btn {
+    width: 600 rpx;
+    height: 100 rpx;
+    line-height: 100 rpx;
+    display: inline-block;
+    background-color: #5F98FD;
+    color: #fff;
+    margin: 0 auto;
 }

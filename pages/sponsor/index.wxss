@@ -1,21 +1,25 @@
-.container{
-  padding: 0 10px;
+.container {
+    padding: 0 10px;
 }
-.title{
-  height: 88rpx;
-  line-height: 88rpx;
-  background-color: #fff;
-  padding: 0 10px;
+
+.title {
+    height: 88 rpx;
+    line-height: 88 rpx;
+    background-color: #fff;
+    padding: 0 10px;
 }
-.content{
-  margin-top: 10px;
-  background-color: #fff;
-  padding:10px;
+
+.content {
+    margin-top: 10px;
+    background-color: #fff;
+    padding: 10px;
 }
-.content .itm{
-  margin-top: 10px;
+
+.content .itm {
+    margin-top: 10px;
 }
-.font-pri{
-  font-weight: bold;
-  font-size: 16px
+
+.font-pri {
+    font-weight: bold;
+    font-size: 16px
 }

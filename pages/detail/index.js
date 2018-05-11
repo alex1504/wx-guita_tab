@@ -155,7 +155,7 @@ Page({
                         } else {
                             obj.love_flag = 2;
                         }
-
+                        obj.song_name = obj.song_name.length > 15 ? obj.song_name.slice(0,15) + '...' : obj.song_name;
                         this.setData({
                             guita_detail: obj
                         })

@@ -75,6 +75,12 @@ module.exports = {
                 success: function (result) {
                     console.log(result)
                     result = result.map(obj => {
+                        // 增加搜索统计
+                        let num = obj.attributes.search_count;
+                        num = typeof num === 'undefined' ? 0 : parseInt(num)+1;
+                        obj.set('search_count', num);
+                        obj.save();
+
                         return {
                             id: obj.id,
                             ...obj.attributes

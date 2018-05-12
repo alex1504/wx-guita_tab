@@ -23,8 +23,7 @@
 
 ## 项目说明
 - 使用[bmob后端云](https://www.bmob.cn/)提供数据服务
-- 吉他谱数据均来自于互联网，爬虫脚本使用Node开发，源码请移步[吉他谱聚合API仓库](https://github.com/alex1504/node-guita-spider)，接口文档移步
-[吉他谱聚合API接口文档](http://www.huzerui.com/node-guita-spider/docs)
+- 吉他谱数据均来自于互联网，爬虫脚本使用Node开发，源码请移步[吉他谱聚合API仓库](https://github.com/alex1504/node-guita-spider)，接口文档移步[吉他谱聚合API接口文档](http://www.huzerui.com/node-guita-spider/docs)
 - 小程序核心功能是快速搜谱，除谱子外的图片使用[七牛云存储](https://www.qiniu.com/)。
 - 若项目对你有所帮助，别忘了**Star**一下，你的支持是我前进的动力
 

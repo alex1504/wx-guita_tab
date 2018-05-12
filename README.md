@@ -22,10 +22,11 @@
 - [ ] 图片加载交互优化
 
 ## 项目说明
-1. 使用[bmob后端云](https://www.bmob.cn/)提供数据服务
-2. 吉他谱数据均来自于互联网，爬虫脚本使用Node开发，源码请转弯[吉他谱聚合API仓库](https://github.com/alex1504/node-guita-spider)
-3. 小程序核心功能是快速搜谱，除谱子外的图片使用[七牛云存储](https://www.qiniu.com/)。
-4. 若项目对你有所帮助，别忘了**Star**一下，你的支持是我前进的动力
+- 使用[bmob后端云](https://www.bmob.cn/)提供数据服务
+- 吉他谱数据均来自于互联网，爬虫脚本使用Node开发，源码请移步[吉他谱聚合API仓库](https://github.com/alex1504/node-guita-spider)，接口文档移步
+[吉他谱聚合API接口文档](http://www.huzerui.com/node-guita-spider/docs)
+- 小程序核心功能是快速搜谱，除谱子外的图片使用[七牛云存储](https://www.qiniu.com/)。
+- 若项目对你有所帮助，别忘了**Star**一下，你的支持是我前进的动力
 
 # EN:
 ## WechatApp·Pocket Guita
@@ -51,8 +52,9 @@ Using Wechat to scan the qrcode for preview
 - [ ] Interactive optimization of picture loading
 
 ## Project Descriptions
-1. Using [bmob](https://www.bmob.cn/) to provide data service
-2. The guitar spectrum data are all from the Internet. Crawler scripts are developed with Node, and the source code is at [The guitar spectrum aggregation API warehouse] (https://github.com/alex1504/node-guita-spider)
-3. The app aims at providing easy tabs searching, all images stored in qiniu excepts tabs.
-4. If the project is useful for you, don't forget to **star**it, your support is my driving force.
+- Using [bmob](https://www.bmob.cn/) to provide data service
+- The guitar spectrum data are all from the Internet. Crawler scripts are developed with Node, and the source code is at [The guitar spectrum aggregation API warehouse] (https://github.com/alex1504/node-guita-spider),Interface document step to
+[Guitar spectrum aggregated API interface document] (http://www.huzerui.com/node-guita-spider/docs)
+- The app aims at providing easy tabs searching, all images stored in qiniu excepts tabs.
+- If the project is useful for you, don't forget to **star**it, your support is my driving force.
 

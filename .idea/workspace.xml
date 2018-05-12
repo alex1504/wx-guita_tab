@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e0b1fc9-d0ac-4fb3-8897-9dd7225e3009" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/detail/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/detail/index.js" afterDir="false" />
-    </list>
+    <list default="true" id="9e0b1fc9-d0ac-4fb3-8897-9dd7225e3009" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -92,8 +89,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pages/detail/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="157" column="92" selection-start-line="157" selection-start-column="92" selection-end-line="157" selection-end-column="92" />
+            <state relative-caret-position="483">
+              <caret line="156" column="25" lean-forward="true" selection-start-line="156" selection-start-column="25" selection-end-line="156" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -313,25 +310,24 @@
       <updated>1525866406831</updated>
       <workItem from="1525866408143" duration="4459000" />
       <workItem from="1525955900928" duration="10000" />
-      <workItem from="1526044164158" duration="2552000" />
+      <workItem from="1526044164158" duration="3083000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7021000" />
+    <option name="totallyTimeSpent" value="7552000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3287234" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3287234" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -702,8 +698,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pages/detail/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="157" column="92" selection-start-line="157" selection-start-column="92" selection-end-line="157" selection-end-column="92" />
+        <state relative-caret-position="483">
+          <caret line="156" column="25" lean-forward="true" selection-start-line="156" selection-start-column="25" selection-end-line="156" selection-end-column="25" />
         </state>
       </provider>
     </entry>

@@ -23,10 +23,9 @@
 
 ## 项目说明
 1. 使用[bmob后端云](https://www.bmob.cn/)提供数据服务
-2. 吉他谱数据初始数据使用nodejs爬虫抓取自[17吉他网](http://www.17jita.com/)，爬虫已开启定时任务每周一午夜更新曲谱；由于17吉他网搜索需要权限，因此部分曲谱抓取自[虫虫吉他](http://www.ccguitar.cn/)，已将虫虫吉他谱抓取封装成接口，示例：[http://guita.huzerui.com:3001/search?s=歌曲名或歌手名](http://guita.huzerui.com:3001/search?s=周杰伦)
+2. 吉他谱数据均来自于互联网，爬虫脚本使用Node开发，源码请转弯[吉他谱聚合API仓库](https://github.com/alex1504/node-guita-spider)
 3. 小程序核心功能是快速搜谱，除谱子外的图片使用[七牛云存储](https://www.qiniu.com/)。
-4. 更详细的小程序开发流程请点击[这里]()
-5. 若项目对你有所帮助，别忘了**star**一下,你的支持是我前进的动力。
+4. 若项目对你有所帮助，别忘了**Star**一下，你的支持是我前进的动力
 
 # EN:
 ## WechatApp·Pocket Guita
@@ -53,8 +52,7 @@ Using Wechat to scan the qrcode for preview
 
 ## Project Descriptions
 1. Using [bmob](https://www.bmob.cn/) to provide data service
-2. Guitar spectrum data using nodejs initial data from [17 Guita Website](http://www.17jita.com/), crawler has opened the timing task every Monday at midnight for update; Dure to search restriction by 17 Guita website, some music scratch from [Chong Chong Guita Website](http://www.ccguitar.cn/), I already make it a interface, for example: [http://guita.huzerui.com:3001/search?s=songName|Singer](http://guita.huzerui.com:3001/search?s=周杰伦/)
+2. The guitar spectrum data are all from the Internet. Crawler scripts are developed with Node, and the source code is at [The guitar spectrum aggregation API warehouse] (https://github.com/alex1504/node-guita-spider)
 3. The app aims at providing easy tabs searching, all images stored in qiniu excepts tabs.
-4. More detailed project completion process, please click[here]()
-5. If the project is useful for you, don't forget to **star**it, your support is my driving force.
+4. If the project is useful for you, don't forget to **star**it, your support is my driving force.
 

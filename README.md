@@ -52,8 +52,8 @@ Using Wechat to scan the qrcode for preview
 
 ## Project Descriptions
 - Using [bmob](https://www.bmob.cn/) to provide data service
-- The guitar spectrum data are all from the Internet. Crawler scripts are developed with Node, and the source code is at [The guitar spectrum aggregation API warehouse] (https://github.com/alex1504/node-guita-spider),Interface document step to
-[Guitar spectrum aggregated API interface document] (http://www.huzerui.com/node-guita-spider/docs)
+- The guitar spectrum data are all from the Internet. Crawler scripts are developed with Node, and the source code is at [The guitar spectrum aggregation API warehouse](https://github.com/alex1504/node-guita-spider). Interface document step to
+[Guitar spectrum aggregated API interface document](http://www.huzerui.com/node-guita-spider/docs)
 - The app aims at providing easy tabs searching, all images stored in qiniu excepts tabs.
 - If the project is useful for you, don't forget to **star**it, your support is my driving force.
 

@@ -1,6 +1,6 @@
 <view class='m-fb'>
     <view class='input'>
-        <input placeholder='请输入联系方式' bindinput='onInputContact'></input>
+        <input placeholder='请输入你的邮箱' bindinput='onInputContact'></input>
     </view>
     <view class='textarea'>
         <textarea placeholder='请输入反馈内容' bindinput='onInputTextarea'></textarea>

@@ -19,7 +19,7 @@ swiper image {
     background-color: #fff;
 }
 
-.box2 {
+.box1 {
     margin-top: 10px;
 }
 

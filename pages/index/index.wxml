@@ -2,44 +2,12 @@
 <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{banner_list}}" wx:key="{{index}}">
         <swiper-item bindtap="navigateToDetail" data-id="{{item.href}}">
-            <image src="{{item.image}}" class="slide-image" mode="aspectFill"/>
+            <image src="{{item.image}}" class="slide-image" mode="aspectFill" />
         </swiper-item>
     </block>
 </swiper>
 
-
 <view class='g-main'>
-    <view class='box1'>
-        <!-- 最热列表  -->
-        <view class='m-title flex-bx'>
-            <view class='hd'>最热</view>
-            <view class="sub">
-                <navigator url='/pages/list/index?type=hot'>
-                    查看全部
-                    <text class='icon icon-right'></text>
-                </navigator>
-            </view>
-        </view>
-        <view class='m-list'>
-            <view class='item flex-bx' bindtap="navigateToDetail" data-id="{{item.id}}" wx:for="{{hotestList}}"
-                  wx:key="{{index}}" wx:if="{{index < 8}}">
-                <view class='hd1'>
-                    <image src="{{item.song_poster}}" mode="aspectFill"></image>
-                </view>
-                <view class='content hd'>
-                    <view>{{item.song_name}}</view>
-                    <view class='sub'>{{item.author_name}}</view>
-                </view>
-                <view>
-                    <view class='icon icon-love-false' wx:if="{{item.love_flag == 1}}" catch:tap='setSongFlag'
-                          data-list="hotestList" data-index="{{index}}" data-id="{{item.id}}"></view>
-                    <view class='icon icon-love-true' wx:if="{{item.love_flag == 2}}" catch:tap='setSongFlag'
-                          data-list="hotestList" data-index="{{index}}" data-id="{{item.id}}"></view>
-                </view>
-            </view>
-        </view>
-    </view>
-
     <view class='box2'>
         <!-- 最新列表  -->
         <view class='m-title flex-bx'>
@@ -52,8 +20,7 @@
             </view>
         </view>
         <view class='m-list'>
-            <view class='item flex-bx' bindtap="navigateToDetail" data-id="{{item.id}}" wx:for="{{latestList}}"
-                  wx:key="{{index}}" wx:if="{{index < 8}}">
+            <view class='item flex-bx' bindtap="navigateToDetail" data-id="{{item.id}}" wx:for="{{latestList}}" wx:key="{{index}}" wx:if="{{index < 8}}">
                 <view class='hd1'>
                     <image src="{{item.song_poster}}" mode="aspectFill"></image>
                 </view>
@@ -62,15 +29,46 @@
                     <view class='sub'>{{item.author_name}}</view>
                 </view>
                 <view>
-                    <view class='icon icon-love-false' wx:if="{{item.love_flag == 1}}" catch:tap='setSongFlag'
-                          data-list="latestList" data-index="{{index}}" data-id="{{item.id}}"></view>
-                    <view class='icon icon-love-true' wx:if="{{item.love_flag == 2}}" catch:tap='setSongFlag'
-                          data-list="latestList" data-index="{{index}}" data-id="{{item.id}}"></view>
+                    <view class='icon icon-love-false' wx:if="{{item.love_flag == 1}}" catch:tap='setSongFlag' data-list="latestList" data-index="{{index}}"
+                        data-id="{{item.id}}"></view>
+                    <view class='icon icon-love-true' wx:if="{{item.love_flag == 2}}" catch:tap='setSongFlag' data-list="latestList" data-index="{{index}}"
+                        data-id="{{item.id}}"></view>
+                </view>
+            </view>
+        </view>
+    </view>
+
+    <view class='box1'>
+        <!-- 最热列表  -->
+        <view class='m-title flex-bx'>
+            <view class='hd'>最热</view>
+            <view class="sub">
+                <navigator url='/pages/list/index?type=hot'>
+                    查看全部
+                    <text class='icon icon-right'></text>
+                </navigator>
+            </view>
+        </view>
+        <view class='m-list'>
+            <view class='item flex-bx' bindtap="navigateToDetail" data-id="{{item.id}}" wx:for="{{hotestList}}" wx:key="{{index}}" wx:if="{{index < 8}}">
+                <view class='hd1'>
+                    <image src="{{item.song_poster}}" mode="aspectFill"></image>
+                </view>
+                <view class='content hd'>
+                    <view>{{item.song_name}}</view>
+                    <view class='sub'>{{item.author_name}}</view>
+                </view>
+                <view>
+                    <view class='icon icon-love-false' wx:if="{{item.love_flag == 1}}" catch:tap='setSongFlag' data-list="hotestList" data-index="{{index}}"
+                        data-id="{{item.id}}"></view>
+                    <view class='icon icon-love-true' wx:if="{{item.love_flag == 2}}" catch:tap='setSongFlag' data-list="hotestList" data-index="{{index}}"
+                        data-id="{{item.id}}"></view>
                 </view>
             </view>
         </view>
     </view>
 </view>
+
 <!-- 底部导航  -->
 <view class='m-nav'>
     <view class='z-active'>

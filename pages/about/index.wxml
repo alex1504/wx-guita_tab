@@ -1,14 +1,16 @@
-<!-- <view class='title font-pri'>口袋吉他</view> -->
-
 <view class='content'>
     <view class='font-pri'>小程序简介：</view>
     <view class='itm'>
         口袋吉他是个人开发的小程序，主要为随时随地想弹奏的吉他爱好者开发的搜谱工具
     </view>
     <view class='itm'>
-        如您有任何建议，欢迎在反馈中向我提出，或者直接联系我。（一般看到会尽快回复）
+        如您有任何建议，欢迎在反馈中向我提出，或者直接联系我。(推荐)
     </view>
     <view class='itm'>
+        觉得小程序不错的话，可以推荐给你的朋友哦！也可以通过打赏小小的支持我一下！
+    </view>
+    <view class='itm'>
+        <view>联系方式：</view>
         <view>QQ：305418614</view>
         <view>邮箱：me@huzerui.com</view>
     </view>

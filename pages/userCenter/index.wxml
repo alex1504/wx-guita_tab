@@ -69,7 +69,7 @@
             </view>
         </view>
     </navigator>
-    <navigator target="miniProgram" open-type="exit" app-id="" path="/pages/apps/largess/detail?id=9l17k9e8hMM%3D" version="release"> 
+    <navigator target="miniProgram" open-type="navigate" app-id="wx18a2ac992306a5a4" path="pages/apps/largess/detail?accountId=4305518" version="release"> 
         <view class='item'>
             <view class='hd'>
                 <view class='u-tag u-tag-5'>

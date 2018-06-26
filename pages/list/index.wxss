@@ -25,6 +25,7 @@ page {
 .m-tab .itm {
     position: relative;
     flex: 1;
+    border-bottom:1px solid #eee;
 }
 
 .m-tab .slider {

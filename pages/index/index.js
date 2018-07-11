@@ -26,6 +26,12 @@ Page({
         })
         wx.setStorageSync('globalChange', false)
     },
+    navigateToDetail(e){
+        const id = e.currentTarget.dataset.id;
+        wx.navigateTo({
+            url: '/pages/detail/index?id='+id
+        })
+    },
     //事件处理函数
     onBannerTap: function (e) {
         const type = e.currentTarget.dataset.type;

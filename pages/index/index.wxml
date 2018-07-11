@@ -1,9 +1,14 @@
 <!-- 轮播图 -->
 <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
     <block wx:for="{{banner_list}}" wx:key="{{index}}">
-        <swiper-item bindtap="navigateToDetail" data-id="{{item.href}}">
+        <swiper-item wx:if="{{item.type!=='mini'}}" bindtap="onBannerTap" data-href="{{item.href}}" data-type="{{item.type}}" data-appid="{{item.appid}}">
             <image src="{{item.image}}" class="slide-image" mode="aspectFill" />
         </swiper-item>
+        <navigator wx:if="{{item.type==='mini'}}" target="miniProgram" open-type="navigate" app-id="{{item.appid}}" path="{{item.href}}" version="release"> 
+            <swiper-item bindtap="onBannerTap" data-href="{{item.href}}" data-type="{{item.type}}" data-appid="{{item.appid}}">
+                <image src="{{item.image}}" class="slide-image" mode="aspectFill" />
+            </swiper-item>
+        </navigator>
     </block>
 </swiper>
 

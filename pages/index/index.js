@@ -27,11 +27,15 @@ Page({
         wx.setStorageSync('globalChange', false)
     },
     //事件处理函数
-    navigateToDetail: function (e) {
-        const id = e.currentTarget.dataset.id;
-        wx.navigateTo({
-            url: '../detail/index?id=' + id
-        })
+    onBannerTap: function (e) {
+        const type = e.currentTarget.dataset.type;
+        const href = e.currentTarget.dataset.href;
+        const appid = e.currentTarget.dataset.appid;
+        if (type === 'page') {
+            wx.navigateTo({
+                url: href
+            })
+        }
     },
     onLoad: function () {
         this.getLoveSongsByOpenId()

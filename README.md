@@ -29,7 +29,8 @@
 
 ## 支持作者
 若项目对你有所帮助，可以打赏作者一杯咖啡，你的支持是我前进的动力。
-![打赏支持](http://qiniu1.huzerui.com/18-9-21/96561430.jpg)
+
+![打赏支持](http://qiniu1.huzerui.com/18-9-21/4636727.jpg)
 
 # EN:
 ## WechatApp·Pocket Guita
@@ -63,4 +64,5 @@ Using Wechat to scan the qrcode for preview
 
 ## Support
 If the project is useful for you, you can make me a coffee. Your support is my driving force.
-![donate](http://qiniu1.huzerui.com/18-9-21/96561430.jpg)
+
+![donate](http://qiniu1.huzerui.com/18-9-21/4636727.jpg)

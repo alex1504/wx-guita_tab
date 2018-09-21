@@ -27,6 +27,10 @@
 - 小程序核心功能是快速搜谱，除谱子外的图片使用[七牛云存储](https://www.qiniu.com/)。
 - 若项目对你有所帮助，别忘了**Star**一下，你的支持是我前进的动力
 
+## 支持作者
+若项目对你有所帮助，可以打赏作者一杯咖啡，你的支持是我前进的动力。
+![打赏支持](http://qiniu1.huzerui.com/18-9-21/96561430.jpg)
+
 # EN:
 ## WechatApp·Pocket Guita
 Using Wechat to scan the qrcode for preview
@@ -57,3 +61,6 @@ Using Wechat to scan the qrcode for preview
 - The app aims at providing easy tabs searching, all images stored in qiniu excepts tabs.
 - If the project is useful for you, don't forget to **star**it, your support is my driving force.
 
+## Support
+If the project is useful for you, you can make me a coffee. Your support is my driving force.
+![donate](http://qiniu1.huzerui.com/18-9-21/96561430.jpg)

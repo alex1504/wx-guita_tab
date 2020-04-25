@@ -2,7 +2,7 @@
 ## 微信小程序·口袋吉他
 用微信扫描二维码预览
 
-![小程序二维码](http://qiniu1.huzerui.com/17-10-19/9711670.jpg)
+![小程序二维码](http://qiniu1.huzerui.com/image/kdjt-qrcode-new.jpg)
 
 ## 项目截图
 ![view1](http://qiniu1.huzerui.com/17-11-9/6887912.jpg)
@@ -36,7 +36,7 @@
 ## WechatApp·Pocket Guita
 Using Wechat to scan the qrcode for preview
 
-![qrcode](http://qiniu1.huzerui.com/17-10-19/9711670.jpg)
+![qrcode](http://qiniu1.huzerui.com/image/kdjt-qrcode-new.jpg)
 
 ## Project Screenshot
 ![view1](http://qiniu1.huzerui.com/17-11-9/6887912.jpg)

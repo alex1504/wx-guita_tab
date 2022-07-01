@@ -2,12 +2,11 @@
 ## 微信小程序·口袋吉他
 用微信扫描二维码预览
 
-![小程序二维码](http://qiniu1.huzerui.com/image/kdjt-qrcode-new.jpg)
+![小程序二维码](https://cdn.jsdelivr.net/gh/sandy1504/media@master/20220701/kdjt-qrcode-new.1mzorl850q4g.webp)
 
 ## 项目截图
-![view1](http://qiniu1.huzerui.com/17-11-9/6887912.jpg)
-![view2](http://qiniu1.huzerui.com/17-11-9/75469062.jpg)
-![view3](http://qiniu1.huzerui.com/17-11-9/61787499.jpg)
+![view1](https://cdn.jsdelivr.net/gh/sandy1504/media@master/20220701/image.3ugd20omo080.webp)
+![view2](https://cdn.jsdelivr.net/gh/sandy1504/media@master/20220701/bce5b18a7f046feb_600_0.1lgud6ju4wps.webp)
 
 ## 功能说明
 - [x] 分页加载及可配置轮播图
@@ -28,20 +27,17 @@
 - 若项目对你有所帮助，别忘了**Star**一下，你的支持是我前进的动力
 
 ## 支持作者
-若项目对你有所帮助，可以打赏作者一杯咖啡，你的支持是我前进的动力。
-
-![打赏支持](http://qiniu1.huzerui.com/18-9-21/4636727.jpg)
+若项目对你有所帮助，可以给它点个星星⭐，你的支持是我前进的动力。
 
 # EN:
 ## WechatApp·Pocket Guita
 Using Wechat to scan the qrcode for preview
 
-![qrcode](http://qiniu1.huzerui.com/image/kdjt-qrcode-new.jpg)
+![qrcode](https://cdn.jsdelivr.net/gh/sandy1504/media@master/20220701/kdjt-qrcode-new.1mzorl850q4g.webp)
 
 ## Project Screenshot
-![view1](http://qiniu1.huzerui.com/17-11-9/6887912.jpg)
-![view2](http://qiniu1.huzerui.com/17-11-9/75469062.jpg)
-![view3](http://qiniu1.huzerui.com/17-11-9/61787499.jpg)
+![view1](https://cdn.jsdelivr.net/gh/sandy1504/media@master/20220701/image.3ugd20omo080.webp)
+![view2](https://cdn.jsdelivr.net/gh/sandy1504/media@master/20220701/bce5b18a7f046feb_600_0.1lgud6ju4wps.webp)
 
 ## Functions
 - [x] Page loading and configurable carousel figure
@@ -63,6 +59,4 @@ Using Wechat to scan the qrcode for preview
 - If the project is useful for you, don't forget to **star**it, your support is my driving force.
 
 ## Support
-If the project is useful for you, you can make me a coffee. Your support is my driving force.
-
-![donate](http://qiniu1.huzerui.com/18-9-21/4636727.jpg)
+If the project is useful for you, you can star this project. Your support is my driving force.

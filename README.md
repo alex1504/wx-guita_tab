@@ -2,7 +2,7 @@
 ## 微信小程序·口袋吉他
 用微信扫描二维码预览
 
-![小程序二维码](https://cdn.jsdelivr.net/gh/sandy1504/media@master/20220701/kdjt-qrcode-new.1mzorl850q4g.webp)
+<img src="https://cdn.jsdelivr.net/gh/sandy1504/media@master/20220701/kdjt-qrcode-new.1mzorl850q4g.webp" alt="小程序二维码" width="400">
 
 ## 项目截图
 ![view1](https://cdn.jsdelivr.net/gh/sandy1504/media@master/20220701/image.3ugd20omo080.webp)
@@ -33,7 +33,7 @@
 ## WechatApp·Pocket Guita
 Using Wechat to scan the qrcode for preview
 
-![qrcode](https://cdn.jsdelivr.net/gh/sandy1504/media@master/20220701/kdjt-qrcode-new.1mzorl850q4g.webp)
+<img src="https://cdn.jsdelivr.net/gh/sandy1504/media@master/20220701/kdjt-qrcode-new.1mzorl850q4g.webp" alt="qrcode" width="400">
 
 ## Project Screenshot
 ![view1](https://cdn.jsdelivr.net/gh/sandy1504/media@master/20220701/image.3ugd20omo080.webp)
